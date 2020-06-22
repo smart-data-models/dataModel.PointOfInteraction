@@ -1,7 +1,7 @@
 --- 
 components: 
   schemas: 
-    SmartPointOfInteraction: 
+    SmartSpot: 
       $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartSpot/schema.yaml#/SmartSpot"
 info: 
   description: |
