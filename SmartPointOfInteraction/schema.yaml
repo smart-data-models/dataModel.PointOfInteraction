@@ -1,16 +1,108 @@
 SmartPointOfInteraction:
   required:
     - id
+    - type
+    - category
+    - applicationUrl
+    - availability
   allOf:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
   type: object
   description: |
-    This repository is going to be archived (Jan-2020) and subsequent works will be carried out in [Smart data models]
-    (https://github.com/smart-data-models) repositories. Further questions on migration. alberto.abella@fiware.org
-    As an alternative or extension to traditional interactive points (shopping malls, museums, airports, etc.), a Smart Point of Interaction use technologies such as Bluetooth Low Energy or Wi-Fi to bring new interactions to user's devices (smartphones, wearables, etc.).
-
     A smart point of interaction is composed mainly by two entities: "Smart Point of Interaction": defines an
     interactive point which provides information, entertainment or co-creation tools to citizens.
     Optionally it can reference a related smart city asset with enriched interaction provided by this technology.
     "Smart Spot": a set of resources related to a physical device and the technology to provide a Smart Point of Interaction.
+
+  properties:
+    address:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/address
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    applicationUrl:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: This field specifies the real URL containing the solution or application
+      format: uri
+    areaServed:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    availability:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: >-
+        Specifies the functionality intervals in which the announcements will be
+        sent
+    category:
+      x-ngsi:
+        type: Property
+      type: array
+      description: Defines the type of interaction
+      items:
+        type: string
+        enum:
+          - information
+          - entertainment
+          - infotainment
+          - co-creation
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    location:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/location
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items: &ref_0
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    refRelatedEntity:
+      x-ngsi:
+        type: Property
+      type: array
+      description: >-
+        List of entities improved with this Smart Point of Interaction. The
+        entity type could be any such as a “Parking”, “Point of Interest”, etc
+      items: *ref_0
+    refSmartSpot:
+      x-ngsi:
+        type: Property
+      type: array
+      description: Reference to one or more entity of type SmartSpot
+      items: *ref_0
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''

@@ -1,6 +1,12 @@
 SmartSpot:
   required:
     - id
+    - type
+    - announcedUrl
+    - signalStrength
+    - bluetoothChannel
+    - announcementPeriod
+    - availability
   allOf:
     - $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
@@ -13,3 +19,83 @@ SmartSpot:
     indicator. The data model is flexible enough to accommodate different usage scenarios: An entity per KPI calculation or 
     a unique entity per KPI which value evolves along time. Please note that in the latter case a historical module, such 
     as the STH, would have to take care of the KPI evolution.
+  properties:
+    alternateName:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    announcedUrl:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/URL'
+      type: string
+      description: URL broadcasted by the device
+      format: uri
+    announcementPeriod:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: Period between announcements in milliseconds
+      format: int32
+    availability:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: >-
+        Specifies the time intervals in which this interactive service is
+        available, but this is a general information while Smart Spots have
+        their own real availability in order to allow advanced configurations
+    bluetoothChannel:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: Bluetooth channels where to transmit the announcement
+    coverageRadius:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Integer'
+      type: integer
+      description: Radius of the spot coverage area in meters
+      format: int32
+    dataProvider:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
+    description:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
+    name:
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
+    owner:
+      x-ngsi:
+        type: Property
+      type: array
+      description: ''
+      items:
+        anyOf:
+          - type: string
+            minLength: 1
+            maxLength: 256
+            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
+          - type: string
+            format: uri
+    signalStrength:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: Signal strength to adjust the announcement range
+    source:
+      x-ngsi:
+        type: Property
+        model: 'https://schema.org/Text'
+      type: string
+      description: ''
