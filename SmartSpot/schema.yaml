@@ -12,20 +12,17 @@ SmartSpot:
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/Common
   type: object
   description: |
-    According to Wikipedia a Key Performance Indicator (KPI) is a type of performance measurement.
-    KPIs evaluate the success of an organization or of a particular activity in which it engages.
-    
-    The present data model defines a type of NGSI entity which captures the value and associated details of a key performance
-    indicator. The data model is flexible enough to accommodate different usage scenarios: An entity per KPI calculation or 
-    a unique entity per KPI which value evolves along time. Please note that in the latter case a historical module, such 
-    as the STH, would have to take care of the KPI evolution.
+    Smart Spots are devices which provide the technology which allows users to get
+    access to smart points of interaction so that they can obtain extra information
+    (infotainment, etc.), provide suggestions (suggestions mailbox, etc.) or
+    generate new content (co-creation, etc.). The data model contains resources to
+    configure the interaction service such as the broadcasted URL (typically
+    shortened), the period between broadcasts, the availability of the service,
+    transmission power depending on the area to be covered, etc.
   properties:
     alternateName:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/schema.org.yaml#/alternateName
     announcedUrl:
       x-ngsi:
         type: Property
@@ -63,11 +60,8 @@ SmartSpot:
       description: Radius of the spot coverage area in meters
       format: int32
     dataProvider:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/dataProvider
     description:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/description
@@ -75,19 +69,8 @@ SmartSpot:
       $ref: >-
         https://raw.githubusercontent.com/smart-data-models/data-models/master/ngsi-ld.yaml#/name
     owner:
-      x-ngsi:
-        type: Relationship
-        model: https://schema.org/URL  
-      type: array
-      description: ''
-      items:
-        anyOf:
-          - type: string
-            minLength: 1
-            maxLength: 256
-            pattern: '^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$'
-          - type: string
-            format: uri
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/owner
     signalStrength:
       x-ngsi:
         type: Property
@@ -95,8 +78,5 @@ SmartSpot:
       type: string
       description: Signal strength to adjust the announcement range
     source:
-      x-ngsi:
-        type: Property
-        model: 'https://schema.org/Text'
-      type: string
-      description: ''
+      $ref: >-
+        https://raw.githubusercontent.com/smart-data-models/data-models/master/fiware-terms.yaml#/source
