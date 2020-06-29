@@ -2,7 +2,7 @@
 components: 
   schemas: 
     SmartPointOfInteraction: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartPointOfInteraction/schema.yaml#/SmartPointOfInteraction"
+      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/model.yaml#/SmartPointOfInteraction"
 info: 
   description: |
     This repository is going to be archived (Jan-2020) and subsequent works will be carried out in [Smart data models]
@@ -41,12 +41,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartPointOfInteraction/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartPointOfInteraction/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld

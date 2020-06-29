@@ -9,11 +9,11 @@ devices (smartphones, wearables, etc.).
 
 A smart point of interaction is composed mainly by two entities:
 
--   [`Smart Point of Interaction`](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartPointOfInteraction/swagger.yaml): defines an interactive point which provides
+-   [`Smart Point of Interaction`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/swagger.yaml): defines an interactive point which provides
     information, entertainment or co-creation tools to citizens. Optionally it
     can reference a related smart city asset with enriched interaction provided
     by this technology.
--   [`Smart Spot`](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartSpot/swagger.yaml): a set of resources related to a physical device and the
+-   [`Smart Spot`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/swagger.yaml): a set of resources related to a physical device and the
     technology to provide a Smart Point of Interaction.
 
 Next illustration shows the data model architecture:

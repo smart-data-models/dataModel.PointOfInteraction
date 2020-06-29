@@ -2,7 +2,7 @@
 components: 
   schemas: 
     SmartSpot: 
-      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartSpot/schema.yaml#/SmartSpot"
+      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/model.yaml#/SmartSpot"
 info: 
   description: |
     This repository is going to be archived (Jan-2020) and subsequent works will be carried out in [Smart data models]
@@ -41,12 +41,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartSpot/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartSpot/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
