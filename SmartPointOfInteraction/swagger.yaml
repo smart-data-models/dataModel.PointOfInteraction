@@ -41,12 +41,12 @@ paths:
                   summary: "Key-Values Pairs"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/example.json"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/examples/example.json"
                 normalized: 
                   summary: "Normalized NGSI-LD"
                   value: 
                     - 
-                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/example-normalized-ld.jsonld"
+                      $ref: "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/examples/example-normalized-ld.jsonld"
           description: OK
       tags: 
         - ngsi-ld
