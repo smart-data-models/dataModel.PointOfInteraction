@@ -46,7 +46,7 @@ SmartSpot:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: >-
+      description: |
         Specifies the time intervals in which this interactive service is
         available, but this is a general information while Smart Spots have
         their own real availability in order to allow advanced configurations

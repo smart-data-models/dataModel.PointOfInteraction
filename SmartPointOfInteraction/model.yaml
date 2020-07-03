@@ -41,7 +41,7 @@ SmartPointOfInteraction:
         type: Property
         model: 'https://schema.org/Text'
       type: string
-      description: >-
+      description: |
         Specifies the functionality intervals in which the announcements will be
         sent
     category:
@@ -76,7 +76,7 @@ SmartPointOfInteraction:
         type: Relationship
         model: https://schema.org/URL
       type: array
-      description: >-
+      description: |
         List of entities improved with this Smart Point of Interaction. The
         entity type could be any such as a “Parking”, “Point of Interest”, etc
       items: &ref_0
