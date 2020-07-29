@@ -70,7 +70,7 @@ SmartPointOfInteraction:
         https://smart-data-models.github.io/data-models/ngsi-ld.yaml#/name
     owner:
       $ref: >-
-        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner 
+        https://smart-data-models.github.io/data-models/fiware-terms.yaml#/owner
     refRelatedEntity:
       x-ngsi:
         type: Relationship
