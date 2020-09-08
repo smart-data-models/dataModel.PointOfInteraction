@@ -23,4 +23,5 @@ transmission power depending on the area to be covered, etc.
 [Link](https://smart-data-models.github.io/dataModel.PointOfInteraction/CONTRIBUTORS.yaml) to the 4 current contributors of the data models of this Subject.
 
 You can raise an [issue](https://github.com/smart-data-models/dataModel.PointOfInteraction/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.PointOfInteraction/pulls) on existing data models
-Next illustration shows the data model architecture <p align='center'><img width='500' alt='general view' src='https://drive.google.com/uc?export=view&id=0B3if5y6_qyk3MGtSMFhyaW12LTA'></p>
+
+
