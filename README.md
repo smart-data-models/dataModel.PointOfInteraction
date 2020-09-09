@@ -1,19 +1,31 @@
-# Smart Point of Interaction data model
+# dataModel.PointOfInteraction
+As an alternative or extension to traditional interactive points (shopping malls, museums, airports, etc.), a Smart Point of Interaction use technologies such as Bluetooth Low Energy or Wi-Fi to bring new interactions to user's devices (smartphones, wearables, etc.).
 
-As an alternative or extension to traditional interactive points (shopping
-malls, museums, airports, etc.), a Smart Point of Interaction use technologies
-such as Bluetooth Low Energy or Wi-Fi to bring new interactions to user's
-devices (smartphones, wearables, etc.).
+### List of data models
 
-A smart point of interaction is composed mainly by two entities:
+The following entity types are available:
+- [SmartPointOfInteraction](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/README.md). A smart point of interaction is composed mainly by two entities: "Smart Point of Interaction": defines an
+interactive point which provides information, entertainment or co-creation tools to citizens.
+Optionally it can reference a related smart city asset with enriched interaction provided by this technology.
+"Smart Spot": a set of resources related to a physical device and the technology to provide a Smart Point of Interaction.
 
--   [`Smart Point of Interaction`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/swagger.yaml): defines an interactive point which provides
-    information, entertainment or co-creation tools to citizens. Optionally it
-    can reference a related smart city asset with enriched interaction provided
-    by this technology.
--   [`Smart Spot`](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/swagger.yaml): a set of resources related to a physical device and the
-    technology to provide a Smart Point of Interaction.
 
-Next illustration shows the data model architecture:
+- [SmartSpot](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/README.md). Smart Spots are devices which provide the technology which allows users to get
+access to smart points of interaction so that they can obtain extra information
+(infotainment, etc.), provide suggestions (suggestions mailbox, etc.) or
+generate new content (co-creation, etc.). The data model contains resources to
+configure the interaction service such as the broadcasted URL (typically
+shortened), the period between broadcasts, the availability of the service,
+transmission power depending on the area to be covered, etc.
 
-<p align="center"><img width="500" alt="general view" src="https://drive.google.com/uc?export=view&id=0B3if5y6_qyk3MGtSMFhyaW12LTA"></p>
+
+
+
+### Contributors
+[Link](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/CONTRIBUTORS.yaml) to the 4 current contributors of the data models of this Subject.
+
+
+### Contribution
+You can raise an [issue](https://github.com/smart-data-models/dataModel.PointOfInteraction/issues) or submit your [PR](https://github.com/smart-data-models/dataModel.PointOfInteraction/pulls) on existing data models
+
+
