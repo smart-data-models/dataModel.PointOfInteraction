@@ -7,7 +7,8 @@ Entity: SmartSpot
 
 - `alternateName`: An alternative name for this item  - `announcedUrl`: URL broadcasted by the device  - `announcementPeriod`: Period between announcements in milliseconds  - `availability`: Specifies the time intervals in which this interactive service is available, but this is a general information while Smart Spots have their own real availability in order to allow advanced configurations  - `bluetoothChannel`: Bluetooth channels where to transmit the announcement  - `coverageRadius`: Radius of the spot coverage area in meters  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refSmartPointOfInteraction`:   - `seeAlso`:   - `signalStrength`: Signal strength to adjust the announcement range  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  ## Data Model description of properties  
 Sorted alphabetically  
-```yaml  
+<details><summary><strong>full yaml details</strong></summary>    
+```yaml  
 SmartSpot:    
   description: 'FIWARE Smart Spot entity schema intended for validation tools'    
   properties:    
@@ -109,6 +110,7 @@ SmartSpot:
     - availability    
   type: object    
 ```  
+</details>    
 #### SmartSpot NGSI V2 key-values Example    
 Here is an example of a SmartSpot in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
