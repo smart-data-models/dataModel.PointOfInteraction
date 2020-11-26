@@ -5,8 +5,10 @@ Entity: SmartPointOfInteraction
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `applicationUrl`: This field specifies the real URL containing the solution or application  - `areaCovered`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `availability`: Specifies the functionality intervals in which the announcements will be sent  - `category`: Defines the type of interaction  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRelatedEntity`: List of entities improved with this Smart Point of Interaction. The entity type could be any such as a “Parking”, “Point of Interest”, etc  - `refSmartSpot`: Reference to one or more entity of type SmartSpot  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type  ## Data Model description of properties  
-Sorted alphabetically  
+- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `applicationUrl`: This field specifies the real URL containing the solution or application  - `areaCovered`:   - `areaServed`: The geographic area where a service or offered item is provided.  - `availability`: Specifies the functionality intervals in which the announcements will be sent  - `category`: Defines the type of interaction  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`:   - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRelatedEntity`: List of entities improved with this Smart Point of Interaction. The entity type could be any such as a “Parking”, “Point of Interest”, etc  - `refSmartSpot`: Reference to one or more entity of type SmartSpot  - `seeAlso`:   - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type    
+Required properties  
+- `applicationUrl`  - `availability`  - `category`  - `id`  - `type`  ## Data Model description of properties  
+Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SmartPointOfInteraction:    
@@ -279,6 +281,7 @@ SmartPointOfInteraction:
   type: object    
 ```  
 </details>    
+## Example payloads    
 #### SmartPointOfInteraction NGSI V2 key-values Example    
 Here is an example of a SmartPointOfInteraction in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
@@ -303,7 +306,7 @@ SmartPointOfInteraction:
 }  
 ```  
 #### SmartPointOfInteraction NGSI V2 normalized Example    
-Here is an example of a SmartPointOfInteraction in JSON format as normalized. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+Here is an example of a SmartPointOfInteraction in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "SPOI-ES-4326",  
@@ -342,7 +345,7 @@ SmartPointOfInteraction:
 }  
 ```  
 #### SmartPointOfInteraction NGSI-LD key-values Example    
-Here is an example of a SmartPointOfInteraction in JSON-LD format as key-values. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+Here is an example of a SmartPointOfInteraction in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {"@context": ["https://schema.lab.fiware.org/ld/context",  
               "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
