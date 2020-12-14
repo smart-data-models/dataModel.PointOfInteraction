@@ -66,6 +66,7 @@ SmartSpot:
     refSmartPointOfInteraction:
       anyOf: *smartspot_-_properties_-_owner_-_items_-_anyof
     seeAlso:
+      description: 'list of uri pointing to additional resources about the item'
       oneOf:
         - items:
             - format: uri
@@ -74,6 +75,7 @@ SmartSpot:
           type: array
         - format: uri
           type: string
+      type: Property
     signalStrength:
       description: 'Signal strength to adjust the announcement range'
       enum:
