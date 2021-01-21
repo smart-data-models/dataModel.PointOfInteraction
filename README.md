@@ -4,20 +4,9 @@ As an alternative or extension to traditional interactive points (shopping malls
 ### List of data models
 
 The following entity types are available:
-- [SmartPointOfInteraction](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/README.md). A smart point of interaction is composed mainly by two entities: "Smart Point of Interaction": defines an
-interactive point which provides information, entertainment or co-creation tools to citizens.
-Optionally it can reference a related smart city asset with enriched interaction provided by this technology.
-"Smart Spot": a set of resources related to a physical device and the technology to provide a Smart Point of Interaction.
+- [SmartPointOfInteraction](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/README.md). FIWARE Smart Point of Interaction entity schema intended for validation tools
 
-
-- [SmartSpot](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/README.md). Smart Spots are devices which provide the technology which allows users to get
-access to smart points of interaction so that they can obtain extra information
-(infotainment, etc.), provide suggestions (suggestions mailbox, etc.) or
-generate new content (co-creation, etc.). The data model contains resources to
-configure the interaction service such as the broadcasted URL (typically
-shortened), the period between broadcasts, the availability of the service,
-transmission power depending on the area to be covered, etc.
-
+- [SmartSpot](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/README.md). FIWARE Smart Spot entity schema intended for validation tools
 
 
 
