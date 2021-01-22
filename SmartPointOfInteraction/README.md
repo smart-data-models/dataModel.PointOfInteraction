@@ -2,11 +2,7 @@
 
 ## Description 
 
-A smart point of interaction is composed mainly by two entities: "Smart Point of Interaction": defines an
-interactive point which provides information, entertainment or co-creation tools to citizens.
-Optionally it can reference a related smart city asset with enriched interaction provided by this technology.
-"Smart Spot": a set of resources related to a physical device and the technology to provide a Smart Point of Interaction.
-
+FIWARE Smart Point of Interaction entity schema intended for validation tools
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/swagger.yaml)
