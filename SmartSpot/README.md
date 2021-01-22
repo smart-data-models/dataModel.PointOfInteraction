@@ -2,14 +2,7 @@
 
 ## Description 
 
-Smart Spots are devices which provide the technology which allows users to get
-access to smart points of interaction so that they can obtain extra information
-(infotainment, etc.), provide suggestions (suggestions mailbox, etc.) or
-generate new content (co-creation, etc.). The data model contains resources to
-configure the interaction service such as the broadcasted URL (typically
-shortened), the period between broadcasts, the availability of the service,
-transmission power depending on the area to be covered, etc.
-
+FIWARE Smart Spot entity schema intended for validation tools
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/swagger.yaml)
