@@ -1,51 +1,51 @@
 Entity: SmartPointOfInteraction  
 ===============================  
 [Open License](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md)  
-Global description: **FIWARE Smart Point of Interaction entity schema intended for validation tools**  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+Global description: **Smart Data Models Smart Point of Interaction entity schema intended for validation tools**  
 
 ## List of properties  
 
-- `address`: The mailing address.  - `alternateName`: An alternative name for this item  - `applicationUrl`: This field specifies the real URL containing the solution or application (information, co-creation, etc) while the SmartSpot 'announcedUrl' field specifies the broadcasted URL which could be this same URL or a shortened one  - `areaCovered`:   - `areaServed`: The geographic area where a service or offered item is provided  - `availability`: Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on dayweeks will be encoded as 'availability': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  - `category`: Defines the type of interaction. Enum:'co-creation, entertainment, information, infotainment'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRelatedEntity`: List of entities improved with this Smart Point of Interaction  - `refSmartSpot`:  References to the “Smart Spot” devices which are part of the Smart Point of Interaction  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be SmartPointOfInteraction    
+- `address`: The mailing address  - `alternateName`: An alternative name for this item  - `applicationUrl`: This field specifies the real URL containing the solution or application (information, co-creation, etc) while the SmartSpot 'announcedUrl' field specifies the broadcast URL which could be this same URL or a shortened one  - `areaCovered`:   - `areaServed`: The geographic area where a service or offered item is provided  - `availability`: Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on weekdays will be encoded as 'availability': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  - `category`: Defines the type of interaction. Enum:'co-creation, entertainment, information, infotainment'  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `location`:   - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRelatedEntity`: List of entities improved with this Smart Point of Interaction  - `refSmartSpot`:  References to the Smart Spot devices which are part of the Smart Point of Interaction  - `seeAlso`: list of uri pointing to additional resources about the item  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be SmartPointOfInteraction    
 Required properties  
-- `applicationUrl`  - `availability`  - `category`  - `id`  - `type`    
+- `id`  - `type`    
 A Smart Point of Interaction defines a place with technology to interact with users, for example, through Beacon technology from Apple, Eddystone/Physical-Web from Google or other proximity-based interfaces. Since the interactive area could be composed by more than one device providing the technology, this model encompasses a group of SmartSpot devices. The data model includes information regarding the area/surface covered by the technology (i.e., the area covered by Bluetooth Low Energy-based Beacon), a way to specify the functionality intervals (i.e. when interactive points are available) and a link to a multimedia resource intended to user interaction (i.e. Web Apps, etc.). Additionally, the data model may reference to another NGSI entity such as a Parking, a Point of Interest (POI), etc. with enriched interaction provided by this Smart Point of Interaction.  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SmartPointOfInteraction:    
-  description: 'FIWARE Smart Point of Interaction entity schema intended for validation tools'    
+  description: 'Smart Data Models Smart Point of Interaction entity schema intended for validation tools'    
   properties:    
     address:    
-      description: 'The mailing address.'    
+      description: 'The mailing address'    
       properties:    
         addressCountry:    
-          description: 'Property. The country. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The country. For example, Spain. Model:''https://schema.org/addressCountry'''    
           type: string    
         addressLocality:    
-          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/Text'''    
+          description: 'Property. The locality in which the street address is, and which is in the region. Model:''https://schema.org/addressLocality'''    
           type: string    
         addressRegion:    
-          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/Text'''    
-          type: string    
-        areaServed:    
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/Text'''    
+          description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''    
           type: string    
         postOfficeBoxNumber:    
-          description: 'Property. The post office box number for PO box addresses. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''    
           type: string    
         postalCode:    
-          description: 'Property. The postal code. For example, Spain. Model:''https://schema.org/Text'''    
+          description: 'Property. The postal code. For example, 24004. Model:''https://schema.org/https://schema.org/postalCode'''    
           type: string    
         streetAddress:    
-          description: 'Property. The street address. Model:''https://schema.org/Text'''    
+          description: 'Property. The street address. Model:''https://schema.org/streetAddress'''    
           type: string    
       type: Property    
+      x-ngsi:    
+        model: https://schema.org/address    
     alternateName:    
       description: 'An alternative name for this item'    
       type: Property    
     applicationUrl:    
-      description: 'This field specifies the real URL containing the solution or application (information, co-creation, etc) while the SmartSpot ''announcedUrl'' field specifies the broadcasted URL which could be this same URL or a shortened one'    
+      description: 'This field specifies the real URL containing the solution or application (information, co-creation, etc) while the SmartSpot ''announcedUrl'' field specifies the broadcast URL which could be this same URL or a shortened one'    
       format: uri    
       type: Property    
       x-ngsi:    
@@ -203,7 +203,7 @@ SmartPointOfInteraction:
       x-ngsi:    
         model: https://schema.org/Text    
     availability:    
-      description: 'Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on dayweeks will be encoded as ''availability'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00''.'    
+      description: 'Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on weekdays will be encoded as ''availability'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00''.'    
       type: Property    
       x-ngsi:    
         model: https://schema.org/openingHours    
@@ -270,9 +270,9 @@ SmartPointOfInteraction:
       type: Relationship    
       uniqueItems: true    
       x-ngsi:    
-        model: 'The entity type could be any such as a “Parking”, “Point of Interest”, etc.http://schema.org/Text'    
+        model: 'The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text'    
     refSmartSpot:    
-      description: ' References to the “Smart Spot” devices which are part of the Smart Point of Interaction'    
+      description: ' References to the Smart Spot devices which are part of the Smart Point of Interaction'    
       items:    
         anyOf: *smartpointofinteraction_-_properties_-_owner_-_items_-_anyof    
         description: 'Property. Unique identifier of the entity'    
@@ -285,8 +285,8 @@ SmartPointOfInteraction:
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -303,15 +303,12 @@ SmartPointOfInteraction:
   required:    
     - id    
     - type    
-    - category    
-    - applicationUrl    
-    - availability    
   type: object    
 ```  
 </details>    
 ## Example payloads    
-#### SmartPointOfInteraction NGSI V2 key-values Example    
-Here is an example of a SmartPointOfInteraction in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### SmartPointOfInteraction NGSI-v2 key-values Example    
+Here is an example of a SmartPointOfInteraction in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "SPOI-ES-4326",  
@@ -333,8 +330,8 @@ SmartPointOfInteraction:
   ]  
 }  
 ```  
-#### SmartPointOfInteraction NGSI V2 normalized Example    
-Here is an example of a SmartPointOfInteraction in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### SmartPointOfInteraction NGSI-v2 normalized Example    
+Here is an example of a SmartPointOfInteraction in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "SPOI-ES-4326",  
@@ -375,86 +372,114 @@ SmartPointOfInteraction:
 #### SmartPointOfInteraction NGSI-LD key-values Example    
 Here is an example of a SmartPointOfInteraction in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "applicationUrl": "http://www.example.org",  
- "areaCovered": {"coordinates": [[[25.774, -80.19],  
-                                  [18.466, -66.118],  
-                                  [32.321, -64.757],  
-                                  [25.774, -80.19]]],  
-                 "type": "Polygon"},  
- "availability": "Tu,Th 16:00-20:00",  
- "category": ["co-creation"],  
- "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
- "refRelatedEntity": ["urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"],  
- "refSmartSpot": ["urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
-                  "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
-                  "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"],  
- "type": "SmartPointOfInteraction"}  
+{  
+  "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+  "type": "SmartPointOfInteraction",  
+  "category": {  
+    "type": "Property",  
+    "value": [  
+      "co-creation"  
+    ]  
+  },  
+  "applicationUrl": {  
+    "type": "Property",  
+    "value": "http://www.example.org"  
+  },  
+  "areaCovered": {  
+    "type": "Property",  
+    "value": {  
+      "type": "Polygon",  
+      "coordinates": [  
+        [  
+          [  
+            25.774,  
+            -80.19  
+          ],  
+          [  
+            18.466,  
+            -66.118  
+          ],  
+          [  
+            32.321,  
+            -64.757  
+          ],  
+          [  
+            25.774,  
+            -80.19  
+          ]  
+        ]  
+      ]  
+    }  
+  },  
+  "availability": {  
+    "type": "Property",  
+    "value": "Tu,Th 16:00-20:00"  
+  },  
+  "refSmartSpot": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
+      "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
+      "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"  
+    ]  
+  },  
+  "refRelatedEntity": {  
+    "type": "Relationship",  
+    "object": [  
+      "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"  
+    ]  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### SmartPointOfInteraction NGSI-LD normalized Example    
 Here is an example of a SmartPointOfInteraction in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
-    "type": "SmartPointOfInteraction",  
-    "category": {  
-        "type": "Property",  
-        "value": [  
-            "co-creation"  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "applicationUrl": "http://www.example.org",  
+  "areaCovered": {  
+    "coordinates": [  
+      [  
+        [  
+          25.774,  
+          -80.19  
+        ],  
+        [  
+          18.466,  
+          -66.118  
+        ],  
+        [  
+          32.321,  
+          -64.757  
+        ],  
+        [  
+          25.774,  
+          -80.19  
         ]  
-    },  
-    "applicationUrl": {  
-        "type": "Property",  
-        "value": "http://www.example.org"  
-    },  
-    "areaCovered": {  
-        "type": "Property",  
-        "value": {  
-            "type": "Polygon",  
-            "coordinates": [  
-                [  
-                    [  
-                        25.774,  
-                        -80.19  
-                    ],  
-                    [  
-                        18.466,  
-                        -66.118  
-                    ],  
-                    [  
-                        32.321,  
-                        -64.757  
-                    ],  
-                    [  
-                        25.774,  
-                        -80.19  
-                    ]  
-                ]  
-            ]  
-        }  
-    },  
-    "availability": {  
-        "type": "Property",  
-        "value": "Tu,Th 16:00-20:00"  
-    },  
-    "refSmartSpot": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
-            "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
-            "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"  
-        ]  
-    },  
-    "refRelatedEntity": {  
-        "type": "Relationship",  
-        "object": [  
-            "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"  
-        ]  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+      ]  
+    ],  
+    "type": "Polygon"  
+  },  
+  "availability": "Tu,Th 16:00-20:00",  
+  "category": [  
+    "co-creation"  
+  ],  
+  "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+  "refRelatedEntity": [  
+    "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"  
+  ],  
+  "refSmartSpot": [  
+    "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
+    "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
+    "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"  
+  ],  
+  "type": "SmartPointOfInteraction"  
 }  
 ```  
