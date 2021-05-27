@@ -6,7 +6,7 @@ As an alternative or extension to traditional interactive points (shopping malls
 The following entity types are available:
 - [SmartPointOfInteraction](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/README.md). FIWARE Smart Point of Interaction entity schema intended for validation tools
 
-- [SmartSpot](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/README.md). FIWARE Smart Spot entity schema intended for validation tools
+- [SmartSpot](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/README.md). Smart Data models Smart Spot entity schema intended for validation tools
 
 
 
