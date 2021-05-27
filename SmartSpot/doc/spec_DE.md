@@ -1,6 +1,7 @@
 Entität: SmartSpot  
 ==================  
 [Offene Lizenz](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartSpot/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Globale Beschreibung: **FIWARE Smart Spot Entity-Schema für Validierungs-Tools**  
 
 ## Liste der Eigenschaften  
@@ -14,7 +15,7 @@ Entität: SmartSpot
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SmartSpot:    
-  description: 'FIWARE Smart Spot entity schema intended for validation tools'    
+  description: 'Smart Data models Smart Spot entity schema intended for validation tools'    
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
@@ -92,15 +93,25 @@ SmartSpot:
         description: 'Property. Unique identifier of the entity'    
       type: Property    
     refSmartPointOfInteraction:    
-      anyOf: *smartspot_-_properties_-_owner_-_items_-_anyof    
-      description: 'Unique identifier of the entity'    
-      type: Property    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the Smart Point of Interaction which includes this Smart Spot'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -124,11 +135,6 @@ SmartSpot:
   required:    
     - id    
     - type    
-    - announcedUrl    
-    - signalStrength    
-    - bluetoothChannel    
-    - announcementPeriod    
-    - availability    
   type: object    
 ```  
 </details>    
