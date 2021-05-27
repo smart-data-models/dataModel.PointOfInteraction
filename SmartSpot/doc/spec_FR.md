@@ -2,7 +2,7 @@ Entité : SmartSpot
 ==================  
 [Licence ouverte] (https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartSpot/LICENSE.md)  
 [document généré automatiquement] (https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-Description globale : **Schéma d'entité Smart Spot destiné aux outils de validation**.  
+Description globale : **Schéma d'entités Smart Spot destiné aux outils de validation**.  
 
 ## Liste des propriétés  
 
@@ -140,7 +140,7 @@ SmartSpot:
 </details>    
 ## Exemples de charges utiles  
 #### Exemple de valeurs de clés SmartSpot NGSI-v2  
-Voici un exemple de SmartSpot au format JSON-LD en tant que valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
+Voici un exemple de SmartSpot au format JSON-LD sous forme de valeurs-clés. Ceci est compatible avec NGSI-v2 en utilisant `options=keyValues` et renvoie les données contextuelles d'une entité individuelle.  
 ```json  
 {  
   "id": "SSPOT-F94C51A295D9",  
