@@ -2,7 +2,7 @@
 
 ## Description 
 
-FIWARE Smart Spot entity schema intended for validation tools
+Smart Data models Smart Spot entity schema intended for validation tools
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/swagger.yaml)
