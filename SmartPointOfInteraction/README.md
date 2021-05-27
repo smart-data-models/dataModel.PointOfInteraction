@@ -2,7 +2,7 @@
 
 ## Description 
 
-FIWARE Smart Point of Interaction entity schema intended for validation tools
+Smart Data Models Smart Point of Interaction entity schema intended for validation tools
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/swagger.yaml)
