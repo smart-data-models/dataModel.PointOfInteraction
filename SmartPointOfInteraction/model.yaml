@@ -1,5 +1,5 @@
 SmartPointOfInteraction:
-  description: 'FIWARE Smart Point of Interaction entity schema intended for validation tools'
+  description: 'Smart Data Models Smart Point of Interaction entity schema intended for validation tools'
   properties:
     address:
       description: 'The mailing address'
@@ -12,9 +12,6 @@ SmartPointOfInteraction:
           type: string
         addressRegion:
           description: 'Property. The region in which the locality is, and which is in the country. Model:''https://schema.org/addressRegion'''
-          type: string
-        areaServed:
-          description: 'Property. The geographic area where a service or offered item is provided. Model:''https://schema.org/areaServed'''
           type: string
         postOfficeBoxNumber:
           description: 'Property. The post office box number for PO box addresses. For example, 03578. Model:''https://schema.org/postOfficeBoxNumber'''
@@ -32,7 +29,7 @@ SmartPointOfInteraction:
       description: 'An alternative name for this item'
       type: Property
     applicationUrl:
-      description: 'This field specifies the real URL containing the solution or application (information, co-creation, etc) while the SmartSpot ''announcedUrl'' field specifies the broadcasted URL which could be this same URL or a shortened one'
+      description: 'This field specifies the real URL containing the solution or application (information, co-creation, etc) while the SmartSpot ''announcedUrl'' field specifies the broadcast URL which could be this same URL or a shortened one'
       format: uri
       type: Property
       x-ngsi:
@@ -190,7 +187,7 @@ SmartPointOfInteraction:
       x-ngsi:
         model: https://schema.org/Text
     availability:
-      description: 'Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on dayweeks will be encoded as ''availability'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00''.'
+      description: 'Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on weekdays will be encoded as ''availability'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00''.'
       type: Property
       x-ngsi:
         model: https://schema.org/openingHours
@@ -257,9 +254,9 @@ SmartPointOfInteraction:
       type: Relationship
       uniqueItems: true
       x-ngsi:
-        model: 'The entity type could be any such as a “Parking”, “Point of Interest”, etc.http://schema.org/Text'
+        model: 'The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text'
     refSmartSpot:
-      description: ' References to the “Smart Spot” devices which are part of the Smart Point of Interaction'
+      description: ' References to the Smart Spot devices which are part of the Smart Point of Interaction'
       items:
         anyOf: *smartpointofinteraction_-_properties_-_owner_-_items_-_anyof
         description: 'Property. Unique identifier of the entity'
@@ -290,7 +287,4 @@ SmartPointOfInteraction:
   required:
     - id
     - type
-    - category
-    - applicationUrl
-    - availability
   type: object
