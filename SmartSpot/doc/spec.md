@@ -1,6 +1,7 @@
 Entity: SmartSpot  
 =================  
 [Open License](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartSpot/LICENSE.md)  
+[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 Global description: **FIWARE Smart Spot entity schema intended for validation tools**  
 
 ## List of properties  
@@ -14,7 +15,7 @@ Entity: SmartSpot
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SmartSpot:    
-  description: 'FIWARE Smart Spot entity schema intended for validation tools'    
+  description: 'Smart Data models Smart Spot entity schema intended for validation tools'    
   properties:    
     alternateName:    
       description: 'An alternative name for this item'    
@@ -92,15 +93,25 @@ SmartSpot:
         description: 'Property. Unique identifier of the entity'    
       type: Property    
     refSmartPointOfInteraction:    
-      anyOf: *smartspot_-_properties_-_owner_-_items_-_anyof    
-      description: 'Unique identifier of the entity'    
-      type: Property    
+      anyOf:    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          maxLength: 256    
+          minLength: 1    
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+          type: string    
+        - description: 'Property. Identifier format of any NGSI entity'    
+          format: uri    
+          type: string    
+      description: 'Reference to the Smart Point of Interaction which includes this Smart Spot'    
+      type: Relationship    
+      x-ngsi:    
+        model: https://schema.org/URL    
     seeAlso:    
       description: 'list of uri pointing to additional resources about the item'    
       oneOf:    
         - items:    
-            - format: uri    
-              type: string    
+            format: uri    
+            type: string    
           minItems: 1    
           type: array    
         - format: uri    
@@ -124,17 +135,12 @@ SmartSpot:
   required:    
     - id    
     - type    
-    - announcedUrl    
-    - signalStrength    
-    - bluetoothChannel    
-    - announcementPeriod    
-    - availability    
   type: object    
 ```  
 </details>    
 ## Example payloads    
-#### SmartSpot NGSI V2 key-values Example    
-Here is an example of a SmartSpot in JSON format as key-values. This is compatible with NGSI V2 when  using `options=keyValues` and returns the context data of an individual entity.  
+#### SmartSpot NGSI-v2 key-values Example    
+Here is an example of a SmartSpot in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "SSPOT-F94C51A295D9",  
@@ -148,8 +154,8 @@ SmartSpot:
   "refSmartPointOfInteraction": "SPOI-ES-4326"  
 }  
 ```  
-#### SmartSpot NGSI V2 normalized Example    
-Here is an example of a SmartSpot in JSON format as normalized. This is compatible with NGSI V2 when not using options and returns the context data of an individual entity.  
+#### SmartSpot NGSI-v2 normalized Example    
+Here is an example of a SmartSpot in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
 ```json  
 {  
   "id": "SSPOT-F94C51A295D9",  
@@ -181,55 +187,59 @@ SmartSpot:
 #### SmartSpot NGSI-LD key-values Example    
 Here is an example of a SmartSpot in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
 ```json  
-{"@context": ["https://schema.lab.fiware.org/ld/context",  
-              "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"],  
- "announcedUrl": "http://goo.gl/EJ81JP",  
- "announcementPeriod": 500,  
- "availability": "Tu,Th 16:00-20:00",  
- "bluetoothChannel": "37,38,39",  
- "coverageRadius": 30,  
- "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
- "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
- "signalStrength": "highest",  
- "type": "SmartSpot"}  
+{  
+  "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
+  "type": "SmartSpot",  
+  "announcementPeriod": {  
+    "type": "Property",  
+    "value": 500  
+  },  
+  "signalStrength": {  
+    "type": "Property",  
+    "value": "highest"  
+  },  
+  "announcedUrl": {  
+    "type": "Property",  
+    "value": "http://goo.gl/EJ81JP"  
+  },  
+  "availability": {  
+    "type": "Property",  
+    "value": "Tu,Th 16:00-20:00"  
+  },  
+  "coverageRadius": {  
+    "type": "Property",  
+    "value": 30  
+  },  
+  "bluetoothChannel": {  
+    "type": "Property",  
+    "value": "37,38,39"  
+  },  
+  "refSmartPointOfInteraction": {  
+    "type": "Relationship",  
+    "object": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326"  
+  },  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ]  
+}  
 ```  
 #### SmartSpot NGSI-LD normalized Example    
 Here is an example of a SmartSpot in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
 ```json  
 {  
-    "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
-    "type": "SmartSpot",  
-    "announcementPeriod": {  
-        "type": "Property",  
-        "value": 500  
-    },  
-    "signalStrength": {  
-        "type": "Property",  
-        "value": "highest"  
-    },  
-    "announcedUrl": {  
-        "type": "Property",  
-        "value": "http://goo.gl/EJ81JP"  
-    },  
-    "availability": {  
-        "type": "Property",  
-        "value": "Tu,Th 16:00-20:00"  
-    },  
-    "coverageRadius": {  
-        "type": "Property",  
-        "value": 30  
-    },  
-    "bluetoothChannel": {  
-        "type": "Property",  
-        "value": "37,38,39"  
-    },  
-    "refSmartPointOfInteraction": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326"  
-    },  
-    "@context": [  
-        "https://schema.lab.fiware.org/ld/context",  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-    ]  
+  "@context": [  
+    "https://smartdatamodels.org/context.jsonld",  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
+  ],  
+  "announcedUrl": "http://goo.gl/EJ81JP",  
+  "announcementPeriod": 500,  
+  "availability": "Tu,Th 16:00-20:00",  
+  "bluetoothChannel": "37,38,39",  
+  "coverageRadius": 30,  
+  "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
+  "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+  "signalStrength": "highest",  
+  "type": "SmartSpot"  
 }  
 ```  
