@@ -1,5 +1,5 @@
 SmartSpot:
-  description: 'FIWARE Smart Spot entity schema intended for validation tools'
+  description: 'Smart Data models Smart Spot entity schema intended for validation tools'
   properties:
     alternateName:
       description: 'An alternative name for this item'
@@ -77,9 +77,19 @@ SmartSpot:
         description: 'Property. Unique identifier of the entity'
       type: Property
     refSmartPointOfInteraction:
-      anyOf: *smartspot_-_properties_-_owner_-_items_-_anyof
-      description: 'Unique identifier of the entity'
-      type: Property
+      anyOf:
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Reference to the Smart Point of Interaction which includes this Smart Spot'
+      type: Relationship
+      x-ngsi:
+        model: https://schema.org/URL
     seeAlso:
       description: 'list of uri pointing to additional resources about the item'
       oneOf:
@@ -109,9 +119,4 @@ SmartSpot:
   required:
     - id
     - type
-    - announcedUrl
-    - signalStrength
-    - bluetoothChannel
-    - announcementPeriod
-    - availability
   type: object
