@@ -6,7 +6,7 @@ Entidad: SmartPointOfInteraction
 
 ## Lista de propiedades  
 
-- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `applicationUrl`: Este campo especifica la URL real que contiene la solución o aplicación (información, cocreación, etc.) mientras que el campo 'announcedUrl' de SmartSpot especifica la URL de difusión que puede ser esta misma URL o una acortada  - `areaCovered`:   - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availability`: Especifica los intervalos de tiempo en los que este servicio interactivo está generalmente disponible. Cabe destacar que los Smart Spots tienen su propia disponibilidad real para permitir configuraciones avanzadas. La sintaxis debe ser conforme a schema.org. Por ejemplo, un servicio que sólo está activo los días laborables se codificará como "disponibilidad": 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  - `category`: Define el tipo de interacción. Enum:'co-creación, entretenimiento, información, infotainment'  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`:   - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRelatedEntity`: Lista de entidades mejoradas con este punto de interacción inteligente  - `refSmartSpot`:  Referencias a los dispositivos Smart Spot que forman parte del Punto de Interacción Inteligente  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser SmartPointOfInteraction    
+- `address`: La dirección postal  - `alternateName`: Un nombre alternativo para este artículo  - `applicationUrl`: Este campo especifica la URL real que contiene la solución o aplicación (información, cocreación, etc.) mientras que el campo 'announcedUrl' de SmartSpot especifica la URL de difusión que puede ser esta misma URL o una acortada  - `areaCovered`:   - `areaServed`: La zona geográfica en la que se presta un servicio o se ofrece un artículo  - `availability`: Especifica los intervalos de tiempo en los que este servicio interactivo está generalmente disponible. Cabe destacar que los Smart Spots tienen su propia disponibilidad real para permitir configuraciones avanzadas. La sintaxis debe ser conforme a schema.org. Por ejemplo, un servicio que sólo está activo los días laborables se codificará como "disponibilidad": 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  - `category`: Define el tipo de interacción. Enum:'co-creación, entretenimiento, información, infotainment'  - `dataProvider`: Una secuencia de caracteres que identifica al proveedor de la entidad de datos armonizada.  - `dateCreated`: Marca de tiempo de creación de la entidad. Suele ser asignada por la plataforma de almacenamiento.  - `dateModified`: Marca de tiempo de la última modificación de la entidad. Normalmente será asignada por la plataforma de almacenamiento.  - `description`: Una descripción de este artículo  - `id`: Identificador único de la entidad  - `location`: Referencia Geojson al elemento. Puede ser Point, LineString, Polygon, MultiPoint, MultiLineString o MultiPolygon  - `name`: El nombre de este artículo.  - `owner`: Una lista que contiene una secuencia de caracteres codificada en JSON que hace referencia a los identificadores únicos de los propietarios  - `refRelatedEntity`: Lista de entidades mejoradas con este punto de interacción inteligente  - `refSmartSpot`:  Referencias a los dispositivos Smart Spot que forman parte del Punto de Interacción Inteligente  - `seeAlso`: lista de uri que apuntan a recursos adicionales sobre el artículo  - `source`: Una secuencia de caracteres que indica la fuente original de los datos de la entidad en forma de URL. Se recomienda que sea el nombre de dominio completo del proveedor de origen, o la URL del objeto de origen.  - `type`: Tipo de entidad NGSI. Tiene que ser SmartPointOfInteraction    
 Propiedades requeridas  
 - `id`  - `type`    
 Un Punto de Interacción Inteligente define un lugar con tecnología para interactuar con los usuarios, por ejemplo, a través de la tecnología Beacon de Apple, Eddystone/Physical-Web de Google u otras interfaces basadas en la proximidad. Dado que el área interactiva podría estar compuesta por más de un dispositivo que proporcione la tecnología, este modelo abarca un grupo de dispositivos SmartSpot. El modelo de datos incluye información relativa al área/superficie cubierta por la tecnología (es decir, el área cubierta por la baliza basada en Bluetooth Low Energy), una forma de especificar los intervalos de funcionalidad (es decir, cuándo están disponibles los puntos interactivos) y un enlace a un recurso multimedia destinado a la interacción con el usuario (es decir, Web Apps, etc.). Además, el modelo de datos puede hacer referencia a otra entidad NGSI, como un aparcamiento, un punto de interés (POI), etc. con una interacción enriquecida proporcionada por este punto de interacción inteligente.  
@@ -53,7 +53,7 @@ SmartPointOfInteraction:
     areaCovered:    
       $id: https://geojson.org/schema/Geometry.json    
       $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf: &smartpointofinteraction_-_properties_-_location_-_oneof    
+      oneOf:    
         - properties:    
             bbox:    
               items:    
@@ -248,10 +248,157 @@ SmartPointOfInteraction:
       description: 'Unique identifier of the entity'    
       type: Property    
     location:    
-      $id: https://geojson.org/schema/Geometry.json    
-      $schema: "http://json-schema.org/draft-07/schema#"    
-      oneOf: *smartpointofinteraction_-_properties_-_location_-_oneof    
-      title: 'GeoJSON Geometry'    
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'    
+      oneOf:    
+        - description: 'Geoproperty. Geojson reference to the item. Point'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                type: number    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - Point    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Point'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. LineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              minItems: 2    
+              type: array    
+            type:    
+              enum:    
+                - LineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON LineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. Polygon'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 4    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - Polygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON Polygon'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiPoint'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  type: number    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPoint    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPoint'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    type: number    
+                  minItems: 2    
+                  type: array    
+                minItems: 2    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiLineString    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiLineString'    
+          type: object    
+        - description: 'Geoproperty. Geojson reference to the item. MultiLineString'    
+          properties:    
+            bbox:    
+              items:    
+                type: number    
+              minItems: 4    
+              type: array    
+            coordinates:    
+              items:    
+                items:    
+                  items:    
+                    items:    
+                      type: number    
+                    minItems: 2    
+                    type: array    
+                  minItems: 4    
+                  type: array    
+                type: array    
+              type: array    
+            type:    
+              enum:    
+                - MultiPolygon    
+              type: string    
+          required:    
+            - type    
+            - coordinates    
+          title: 'GeoJSON MultiPolygon'    
+          type: object    
+      type: Geoproperty    
     name:    
       description: 'The name of this item.'    
       type: Property    
