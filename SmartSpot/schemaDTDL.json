@@ -1,0 +1,188 @@
+{
+    "@id": "dtmi:com:ngsi-ld:SmartSpot;0",
+    "@type": "Interface",
+    "@context": "dtmi:dtdl:context;2",
+    "comment": "Smart Data Models - Smart Spot adapted to DTDL from smartdatamodels.org. Source: https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartSpot/schema.json",
+    "description": "Smart Data models Smart Spot entity schema intended for validation tools",
+    "displayName": "SmartSpot",
+    "contents": [
+        {
+            "name": "alternateName",
+            "writable": true,
+            "displayName": "alternateName",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "An alternative name for this item"
+        },
+        {
+            "name": "announcedUrl",
+            "writable": true,
+            "displayName": "announcedUrl",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "URL broadcasted by the device"
+        },
+        {
+            "name": "announcementPeriod",
+            "writable": true,
+            "displayName": "announcementPeriod",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Period between announcements in milliseconds"
+        },
+        {
+            "name": "availability",
+            "writable": true,
+            "displayName": "availability",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "Specifies the time intervals in which this interactive service is available, but this is a general information while Smart Spots have their own real availability in order to allow advanced configurations"
+        },
+        {
+            "name": "coverageRadius",
+            "writable": true,
+            "displayName": "coverageRadius",
+            "@type": "Property",
+            "schema": "integer",
+            "comment": "Radius of the spot coverage area in meters"
+        },
+        {
+            "name": "dataProvider",
+            "writable": true,
+            "displayName": "dataProvider",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters identifying the provider of the harmonised data entity."
+        },
+        {
+            "name": "dateCreated",
+            "writable": true,
+            "displayName": "dateCreated",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Entity creation timestamp. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "dateModified",
+            "writable": true,
+            "displayName": "dateModified",
+            "@type": "Property",
+            "schema": "dateTime",
+            "comment": "Timestamp of the last modification of the entity. This will usually be allocated by the storage platform."
+        },
+        {
+            "name": "description",
+            "writable": true,
+            "displayName": "description",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A description of this item"
+        },
+        {
+            "name": "name",
+            "writable": true,
+            "displayName": "name",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "The name of this item."
+        },
+        {
+            "name": "refSmartPointOfInteraction",
+            "writable": true,
+            "displayName": "refSmartPointOfInteraction"
+        },
+        {
+            "name": "seeAlso",
+            "writable": true,
+            "displayName": "seeAlso"
+        },
+        {
+            "name": "source",
+            "writable": true,
+            "displayName": "source",
+            "@type": "Property",
+            "schema": "string",
+            "comment": "A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object."
+        },
+        {
+            "@type": "Telemetry",
+            "name": "owner",
+            "schema": {
+                "@type": "Array",
+                "elementSchema": "string"
+            },
+            "comment": "A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)",
+            "displayName": "owner"
+        },
+        {
+            "@type": "Telemetry",
+            "name": "bluetoothChannel",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": 37,
+                        "displayName": 37,
+                        "enumValue": 1
+                    },
+                    {
+                        "name": 38,
+                        "displayName": 38,
+                        "enumValue": 2
+                    },
+                    {
+                        "name": 39,
+                        "displayName": 39,
+                        "enumValue": 3
+                    },
+                    {
+                        "name": "37,38",
+                        "displayName": "37,38",
+                        "enumValue": 4
+                    },
+                    {
+                        "name": "38,39",
+                        "displayName": "38,39",
+                        "enumValue": 5
+                    },
+                    {
+                        "name": "37,39",
+                        "displayName": "37,39",
+                        "enumValue": 6
+                    },
+                    {
+                        "name": "37,38,39",
+                        "displayName": "37,38,39",
+                        "enumValue": 7
+                    }
+                ]
+            }
+        },
+        {
+            "@type": "Telemetry",
+            "name": "signalStrength",
+            "schema": {
+                "@type": "Enum",
+                "valueSchema": "string",
+                "enumValues": [
+                    {
+                        "name": "highest",
+                        "displayName": "highest",
+                        "enumValue": 1
+                    },
+                    {
+                        "name": "lowest",
+                        "displayName": "lowest",
+                        "enumValue": 2
+                    },
+                    {
+                        "name": "medium",
+                        "displayName": "medium",
+                        "enumValue": 3
+                    }
+                ]
+            }
+        }
+    ]
+}
