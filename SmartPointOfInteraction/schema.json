@@ -3,5 +3,6 @@
     "$schemaVersion": "0.0.2",
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/schema.json",
-    "title": "Smart Data Models - Smart Point of Interaction"
+    "title": "Smart Data Models - Smart Point of Interaction",
+    "description": "Smart Data Models Smart Point of Interaction entity schema intended for validation tools"
 }
