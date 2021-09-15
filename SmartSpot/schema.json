@@ -4,5 +4,6 @@
     "modelTags": "",
     "$id": "https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/schema.json",
     "title": "Smart Data Models - Smart Spot",
-    "description": "Smart Data models Smart Spot entity schema intended for validation tools"
+    "description": "Smart Data models Smart Spot entity schema intended for validation tools",
+    "type": "object"
 }
