@@ -1,4 +1,5 @@
 # SmartPointOfInteraction
+Version: 0.0.2
 
 ## Description 
 
@@ -13,7 +14,7 @@ Enlace a la [Especificación en español](https://smart-data-models.github.io/da
 
 Lien vers le [spécification en français](https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/doc/spec_FR.md)
 
-Link zu der [deutchen Spezifikation](https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/doc/spec_DE.md)
+Link zur [deutschen Spezifikation](https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/doc/spec_DE.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/examples/example.json) (keyvalues) for NGSI v2
