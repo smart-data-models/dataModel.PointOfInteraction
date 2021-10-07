@@ -39,217 +39,8 @@ SmartPointOfInteraction:
         model: https://schema.org/URL
         type: Property
     areaCovered:
-      $id: https://geojson.org/schema/Geometry.json
-      $schema: "http://json-schema.org/draft-07/schema#"
-      oneOf:
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                type: number
-              minItems: 2
-              type: array
-            type:
-              enum:
-                - Point
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON Point'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  type: number
-                minItems: 2
-                type: array
-              minItems: 2
-              type: array
-            type:
-              enum:
-                - LineString
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON LineString'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    type: number
-                  minItems: 2
-                  type: array
-                minItems: 4
-                type: array
-              type: array
-            type:
-              enum:
-                - Polygon
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON Polygon'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  type: number
-                minItems: 2
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiPoint
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiPoint'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    type: number
-                  minItems: 2
-                  type: array
-                minItems: 2
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiLineString
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiLineString'
-          type: object
-        - properties:
-            bbox:
-              items:
-                type: number
-              minItems: 4
-              type: array
-            coordinates:
-              items:
-                items:
-                  items:
-                    items:
-                      type: number
-                    minItems: 2
-                    type: array
-                  minItems: 4
-                  type: array
-                type: array
-              type: array
-            type:
-              enum:
-                - MultiPolygon
-              type: string
-          required:
-            - type
-            - coordinates
-          title: 'GeoJSON MultiPolygon'
-          type: object
-      title: 'GeoJSON Geometry'
-    areaServed:
-      description: 'The geographic area where a service or offered item is provided'
-      type: string
-      x-ngsi:
-        model: https://schema.org/Text
-        type: Property
-    availability:
-      description: 'Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on weekdays will be encoded as ''availability'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00''.'
-      type: string
-      x-ngsi:
-        model: https://schema.org/openingHours
-        type: Property
-    category:
-      description: 'Defines the type of interaction. Enum:''co-creation, entertainment, information, infotainment'''
-      items:
-        enum:
-          - co-creation
-          - entertainment
-          - information
-          - infotainment
-        type: string
-      minItems: 1
-      type: array
-      uniqueItems: true
-      x-ngsi:
-        model: http://schema.org/Text
-        type: Property
-    dataProvider:
-      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
-      type: string
-      x-ngsi:
-        type: Property
-    dateCreated:
-      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
-      format: date-time
-      type: string
-      x-ngsi:
-        type: Property
-    dateModified:
-      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
-      format: date-time
-      type: string
-      x-ngsi:
-        type: Property
-    description:
-      description: 'A description of this item'
-      type: string
-      x-ngsi:
-        type: Property
-    id:
-      anyOf: &smartpointofinteraction_-_properties_-_owner_-_items_-_anyof
-        - description: 'Property. Identifier format of any NGSI entity'
-          maxLength: 256
-          minLength: 1
-          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
-          type: string
-        - description: 'Property. Identifier format of any NGSI entity'
-          format: uri
-          type: string
-      description: 'Unique identifier of the entity'
-      x-ngsi:
-        type: Property
-    location:
       description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
-      oneOf:
+      oneOf: &smartpointofinteraction_-_properties_-_location_-_oneof
         - description: 'Geoproperty. Geojson reference to the item. Point'
           properties:
             bbox:
@@ -400,6 +191,73 @@ SmartPointOfInteraction:
           type: object
       x-ngsi:
         type: Geoproperty
+    areaServed:
+      description: 'The geographic area where a service or offered item is provided'
+      type: string
+      x-ngsi:
+        model: https://schema.org/Text
+        type: Property
+    availability:
+      description: 'Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on weekdays will be encoded as ''availability'': ''Mo,Tu,We,Th,Fr,Sa 09:00-20:00''.'
+      type: string
+      x-ngsi:
+        model: https://schema.org/openingHours
+        type: Property
+    category:
+      description: 'Defines the type of interaction. Enum:''co-creation, entertainment, information, infotainment'''
+      items:
+        enum:
+          - co-creation
+          - entertainment
+          - information
+          - infotainment
+        type: string
+      minItems: 1
+      type: array
+      uniqueItems: true
+      x-ngsi:
+        model: http://schema.org/Text
+        type: Property
+    dataProvider:
+      description: 'A sequence of characters identifying the provider of the harmonised data entity.'
+      type: string
+      x-ngsi:
+        type: Property
+    dateCreated:
+      description: 'Entity creation timestamp. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    dateModified:
+      description: 'Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.'
+      format: date-time
+      type: string
+      x-ngsi:
+        type: Property
+    description:
+      description: 'A description of this item'
+      type: string
+      x-ngsi:
+        type: Property
+    id:
+      anyOf: &smartpointofinteraction_-_properties_-_owner_-_items_-_anyof
+        - description: 'Property. Identifier format of any NGSI entity'
+          maxLength: 256
+          minLength: 1
+          pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$
+          type: string
+        - description: 'Property. Identifier format of any NGSI entity'
+          format: uri
+          type: string
+      description: 'Unique identifier of the entity'
+      x-ngsi:
+        type: Property
+    location:
+      description: 'Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon'
+      oneOf: *smartpointofinteraction_-_properties_-_location_-_oneof
+      x-ngsi:
+        type: Geoproperty
     name:
       description: 'The name of this item.'
       type: string
@@ -463,3 +321,4 @@ SmartPointOfInteraction:
     - id
     - type
   type: object
+  version: 0.0.2
