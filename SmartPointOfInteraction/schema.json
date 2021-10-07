@@ -38,7 +38,7 @@
                     "uniqueItems": true
                 },
                 "areaCovered": {
-                    "$ref": "http://geojson.org/schema/Geometry.json#"
+                    "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/Location-Commons/properties/location"
                 },
                 "applicationUrl": {
                     "type": "string",
