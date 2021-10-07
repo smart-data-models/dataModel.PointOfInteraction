@@ -1,0 +1,30 @@
+{
+    "@context": {
+        "address": "https://smartdatamodels.org/dataModel.PointOfInteraction/address",
+        "alternateName": "https://smartdatamodels.org/dataModel.PointOfInteraction/alternateName",
+        "announcedUrl": "https://smartdatamodels.org/dataModel.PointOfInteraction/announcedUrl",
+        "announcementPeriod": "https://smartdatamodels.org/dataModel.PointOfInteraction/announcementPeriod",
+        "applicationUrl": "https://smartdatamodels.org/dataModel.PointOfInteraction/applicationUrl",
+        "areaCovered": "https://smartdatamodels.org/dataModel.PointOfInteraction/areaCovered",
+        "areaServed": "https://smartdatamodels.org/dataModel.PointOfInteraction/areaServed",
+        "availability": "https://smartdatamodels.org/dataModel.PointOfInteraction/availability",
+        "bluetoothChannel": "https://smartdatamodels.org/dataModel.PointOfInteraction/bluetoothChannel",
+        "category": "https://smartdatamodels.org/dataModel.PointOfInteraction/category",
+        "coverageRadius": "https://smartdatamodels.org/dataModel.PointOfInteraction/coverageRadius",
+        "dataProvider": "https://smartdatamodels.org/dataModel.PointOfInteraction/dataProvider",
+        "dateCreated": "https://smartdatamodels.org/dataModel.PointOfInteraction/dateCreated",
+        "dateModified": "https://smartdatamodels.org/dataModel.PointOfInteraction/dateModified",
+        "description": "https://smartdatamodels.org/dataModel.PointOfInteraction/description",
+        "id": "@id",
+        "location": "https://smartdatamodels.org/dataModel.PointOfInteraction/location",
+        "name": "https://smartdatamodels.org/dataModel.PointOfInteraction/name",
+        "owner": "https://smartdatamodels.org/dataModel.PointOfInteraction/owner",
+        "refRelatedEntity": "https://smartdatamodels.org/dataModel.PointOfInteraction/refRelatedEntity",
+        "refSmartPointOfInteraction": "https://smartdatamodels.org/dataModel.PointOfInteraction/refSmartPointOfInteraction",
+        "refSmartSpot": "https://smartdatamodels.org/dataModel.PointOfInteraction/refSmartSpot",
+        "seeAlso": "https://smartdatamodels.org/dataModel.PointOfInteraction/seeAlso",
+        "signalStrength": "https://smartdatamodels.org/dataModel.PointOfInteraction/signalStrength",
+        "source": "https://smartdatamodels.org/dataModel.PointOfInteraction/source",
+        "type": "@type"
+    }
+}
