@@ -6,7 +6,7 @@ Version: 0.1.0
 Smart Data models Smart Spot entity schema intended for validation tools
 ### Specification
 
-Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/swagger.yaml)
+Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartSpot/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/doc/spec.md)
 
