@@ -321,4 +321,9 @@ SmartPointOfInteraction:
     - id
     - type
   type: object
-  version: 0.0.2
+  x-derived-from: ""
+  x-disclaimer: 'copyleft (c) 2021 Contributors to Smart Data Models Program'
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md
+  x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/schema.json
+  x-model-tags: ""
+  x-version: 0.0.2
