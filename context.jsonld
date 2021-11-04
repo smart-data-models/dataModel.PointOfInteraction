@@ -18,6 +18,7 @@
         "id": "@id",
         "location": "ngsi-ld:location",
         "name": "https://smartdatamodels.org/name",
+        "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
         "refRelatedEntity": "https://smartdatamodels.org/dataModel.PointOfInteraction/refRelatedEntity",
         "refSmartPointOfInteraction": "https://smartdatamodels.org/dataModel.PointOfInteraction/refSmartPointOfInteraction",
