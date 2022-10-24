@@ -1,18 +1,32 @@
-エンティティSmartPointOfInteraction（スマートポイントオブインタラクション  
-================================================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+エンティティSmartPointOfInteraction  
+=============================<!-- /10-Header -->  
+<!-- 15-License -->  
 [オープンライセンス](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
-グローバルな記述です。**Smart Data Models Smart Point of Interactionの検証ツール用のエンティティスキーマ**。  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
+グローバルな記述です。**スマートデータモデル スマートポイントオブインタラクション エンティティスキーマ 検証ツール用  
 バージョン: 0.0.2  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
-## プロパティのリスト  
+## プロパティ一覧  
 
-- `address`: 郵送先住所  - `alternateName`: このアイテムの別称  - `applicationUrl`: このフィールドは、ソリューションやアプリケーション（情報、共創など）を含む実際のURLを指定します。一方、SmartSpotの「announcedUrl」フィールドは、同じURLまたは短縮されたURLである可能性のあるブロードキャストURLを指定します。  - `areaCovered`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `areaServed`: サービスや提供されるアイテムが提供される地理的なエリア  - `availability`: このインタラクティブサービスが一般的に利用可能な時間間隔を指定します。スマートスポットは、高度な設定を可能にするために、独自の実際の利用可能時間を持っていることに注目してください。構文はschema.orgに準拠していなければなりません。例えば、平日のみ利用可能なサービスは「可用性」としてエンコードされます。'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  - `category`: インタラクションのタイプを定義します。Enum:'co-creation, entertainment, information, infotainment' (共創、娯楽、情報、インフォテイメント)  - `dataProvider`: 調和されたデータ・エンティティの提供者を識別する一連の文字。  - `dateCreated`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `dateModified`: エンティティが最後に変更された時のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられます。  - `description`: このアイテムの説明  - `id`: エンティティのユニークな識別子  - `location`: アイテムへのGeojson参照。Point、LineString、Polygon、MultiPoint、MultiLineString、MultiPolygonのいずれかです。  - `name`: このアイテムの名前です。  - `owner`: オーナーのIDを参照するJSONエンコードされた文字列を含むリスト  - `refRelatedEntity`: このスマート・ポイント・オブ・インタラクションで改善されたエンティティのリスト  - `refSmartSpot`: スマート・ポイント・オブ・インタラクションの一部であるスマート・スポット・デバイスへの言及  - `seeAlso`: アイテムに関する追加リソースを示すuriのリスト  - `source`: エンティティデータのオリジナルソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type`: NGSI エンティティタイプ。SmartPointOfInteractionである必要があります。    
-必須項目  
-- `id`  - `type`    
-スマート・ポイント・オブ・インタラクションは、AppleのBeacon技術、GoogleのEddystone/Physical-Web、その他の近接型インターフェースなど、ユーザーと対話するための技術を備えた場所を定義しています。インタラクティブエリアは、技術を提供する複数のデバイスによって構成される可能性があるため、このモデルは、SmartSpotデバイスのグループを包含します。データモデルには、技術によってカバーされる領域／表面（すなわち、Bluetooth Low EnergyベースのBeaconによってカバーされる領域）に関する情報、機能間隔（すなわち、インタラクティブポイントが利用可能なとき）を指定する方法、およびユーザーのインタラクションを目的としたマルチメディアリソース（すなわち、Webアプリなど）へのリンクが含まれます。さらに、データモデルは、パーキングやPOI（Point of Interest）などのNGSIエンティティを参照することができ、このスマート・ポイント・オブ・インタラクションによって充実したインタラクションが提供されます。  
-## データモデルによるプロパティの記述  
-アルファベット順（クリックすると詳細が表示されます  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `address[object]`: 郵送先住所  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: この項目の別称  - `applicationUrl[string]`: このフィールドは、ソリューションやアプリケーション（情報、共同制作など）を含む実際のURLを指定し、SmartSpotの「announcedUrl」フィールドは、同じURLまたは短縮されたURLを指定します。  . Model: [https://schema.org/URL](https://schema.org/URL)- `areaCovered[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `areaServed[string]`: サービスまたは提供品が提供される地理的な地域  . Model: [https://schema.org/Text](https://schema.org/Text)- `availability[string]`: このインタラクティブサービスが一般に利用可能な時間間隔を指定する。スマートスポットは、高度な設定を可能にするために、独自の実際の利用可能時間を持つことが注目される。構文はschema.orgに準拠する必要があります。例えば、平日のみ利用可能なサービスは、'availability'としてエンコードされます。'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `category[array]`: インタラクションの種類を定義する。Enum:'co-creation, entertainment, information, infotainment' （共創、エンターテインメント、情報、インフォテインメント  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `location[*]`: アイテムへの Geojson リファレンス。Point, LineString, Polygon, MultiPoint, MultiLineString, MultiPolygonのいずれかを指定することができる。  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refRelatedEntity[array]`: この「スマートポイント・オブ・インタラクション」で改善された事業体のリスト  . Model: [The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text](The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text)- `refSmartSpot[array]`: Smart Point of Interactionの一部であるSmart Spotデバイスへの言及  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entity タイプ。SmartPointOfInteractionである必要があります。  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
+必要なプロパティ  
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
+Smart Point of Interactionは、例えばAppleのBeacon技術、GoogleのEddystone/Physical-Web、その他の近接型インターフェースを通じて、ユーザーと対話する技術を持つ場所を定義する。インタラクティブエリアは、技術を提供する複数のデバイスによって構成される可能性があるため、このモデルはSmartSpotデバイスのグループを包含する。データモデルには、技術によってカバーされる領域／表面（すなわち、Bluetooth Low EnergyベースのBeaconによってカバーされる領域）に関する情報、機能間隔（すなわち、インタラクティブポイントが利用可能なとき）を指定する方法、およびユーザインタラクションを目的としたマルチメディアリソース（すなわち、Web Appsなど）へのリンクが含まれる。さらに、データモデルは、駐車場、POI（Point of Interest）などの別のNGSIエンティティを参照し、このスマートインタラクションポイントによって提供されるインタラクションを充実させることができる。  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SmartPointOfInteraction:    
@@ -338,12 +352,22 @@ SmartPointOfInteraction:
     - id    
     - type    
   type: object    
-  version: 0.0.2    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/schema.json    
+  x-model-tags: ""    
+  x-version: 0.0.2    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## ペイロードの例  
-#### SmartPointOfInteraction NGSI-v2 のキーバリューの例。  
-SmartPointOfInteractionをkey-valuesとしてJSON-LD形式で表現した例を示します。これは、`options=keyValues`を使用した場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+#### SmartPointOfInteraction NGSI-v2 key-value の例。  
+ここでは、SmartPointOfInteractionをJSON-LD形式でkey-valuesとして表現した例を示します。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SPOI-ES-4326",  
@@ -365,8 +389,10 @@ SmartPointOfInteraction:
   ]  
 }  
 ```  
-#### SmartPointOfInteraction NGSI-v2の正規化例  
-ここでは、正規化されたJSON-LD形式のSmartPointOfInteractionの例を示します。これは、オプションを使用しない場合のNGSI-v2との互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### SmartPointOfInteraction NGSI-v2 正規化例  
+以下は、SmartPointOfInteraction を正規化した JSON-LD 形式の例です。これは、オプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SPOI-ES-4326",  
@@ -404,119 +430,130 @@ SmartPointOfInteraction:
   }  
 }  
 ```  
-#### SmartPointOfInteraction NGSI-LDのキーバリューの例  
-SmartPointOfInteractionをkey-valuesとしてJSON-LD形式で表現した例を示します。これは、`options=keyValues`を使用した場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### SmartPointOfInteraction NGSI-LD キー値の例  
+ここでは、SmartPointOfInteractionをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータが返される。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
-  "type": "SmartPointOfInteraction",  
-  "category": {  
-    "type": "Property",  
-    "value": [  
-      "co-creation"  
-    ]  
-  },  
-  "applicationUrl": {  
-    "type": "Property",  
-    "value": "http://www.example.org"  
-  },  
-  "areaCovered": {  
-    "type": "Property",  
-    "value": {  
-      "type": "Polygon",  
-      "coordinates": [  
-        [  
-          [  
-            25.774,  
-            -80.19  
-          ],  
-          [  
-            18.466,  
-            -66.118  
-          ],  
-          [  
-            32.321,  
-            -64.757  
-          ],  
-          [  
-            25.774,  
-            -80.19  
-          ]  
+    "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+    "type": "SmartPointOfInteraction",  
+    "applicationUrl": {  
+        "type": "Property",  
+        "value": "http://www.example.org"  
+    },  
+    "areaCovered": {  
+        "type": "Property",  
+        "value": {  
+            "type": "Polygon",  
+            "coordinates": [  
+                [  
+                    [  
+                        25.774,  
+                        -80.19  
+                    ],  
+                    [  
+                        18.466,  
+                        -66.118  
+                    ],  
+                    [  
+                        32.321,  
+                        -64.757  
+                    ],  
+                    [  
+                        25.774,  
+                        -80.19  
+                    ]  
+                ]  
+            ]  
+        }  
+    },  
+    "availability": {  
+        "type": "Property",  
+        "value": "Tu,Th 16:00-20:00"  
+    },  
+    "category": {  
+        "type": "Property",  
+        "value": [  
+            "co-creation"  
         ]  
-      ]  
-    }  
-  },  
-  "availability": {  
-    "type": "Property",  
-    "value": "Tu,Th 16:00-20:00"  
-  },  
-  "refSmartSpot": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
-      "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
-      "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"  
+    },  
+    "refRelatedEntity": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"  
+        ]  
+    },  
+    "refSmartSpot": {  
+        "type": "Relationship",  
+        "object": [  
+            "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
+            "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
+            "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"  
+        ]  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
     ]  
-  },  
-  "refRelatedEntity": {  
-    "type": "Relationship",  
-    "object": [  
-      "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"  
-    ]  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
 }  
 ```  
-#### SmartPointOfInteraction NGSI-LDの正規化例  
-ここでは、正規化されたJSON-LD形式のSmartPointOfInteractionの例を示します。これは、オプションを使用しない場合のNGSI-LDとの互換性があり、個々のエンティティのコンテキストデータを返します。  
+</details>  
+#### SmartPointOfInteraction NGSI-LD 正規化例  
+以下は、SmartPointOfInteraction を正規化した JSON-LD 形式の例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "applicationUrl": "http://www.example.org",  
-  "areaCovered": {  
-    "coordinates": [  
-      [  
-        [  
-          25.774,  
-          -80.19  
+    "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+    "type": "SmartPointOfInteraction",  
+    "applicationUrl": "http://www.example.org",  
+    "areaCovered": {  
+        "coordinates": [  
+            [  
+                [  
+                    25.774,  
+                    -80.19  
+                ],  
+                [  
+                    18.466,  
+                    -66.118  
+                ],  
+                [  
+                    32.321,  
+                    -64.757  
+                ],  
+                [  
+                    25.774,  
+                    -80.19  
+                ]  
+            ]  
         ],  
-        [  
-          18.466,  
-          -66.118  
-        ],  
-        [  
-          32.321,  
-          -64.757  
-        ],  
-        [  
-          25.774,  
-          -80.19  
-        ]  
-      ]  
+        "type": "Polygon"  
+    },  
+    "availability": "Tu,Th 16:00-20:00",  
+    "category": [  
+        "co-creation"  
     ],  
-    "type": "Polygon"  
-  },  
-  "availability": "Tu,Th 16:00-20:00",  
-  "category": [  
-    "co-creation"  
-  ],  
-  "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
-  "refRelatedEntity": [  
-    "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"  
-  ],  
-  "refSmartSpot": [  
-    "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
-    "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
-    "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"  
-  ],  
-  "type": "SmartPointOfInteraction"  
+    "refRelatedEntity": [  
+        "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"  
+    ],  
+    "refSmartSpot": [  
+        "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",  
+        "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",  
+        "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"  
+    ],  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
