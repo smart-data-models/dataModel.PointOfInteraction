@@ -1,17 +1,32 @@
-Entity: SmartSpot  
-=================  
+<!-- 10-Header -->  
+[![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
+Entity: SmartSpot  
+=================<!-- /10-Header -->  
+<!-- 15-License -->  
 [Open License](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartSpot/LICENSE.md)  
 [document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+<!-- /15-License -->  
+<!-- 20-Description -->  
 Global description: **Smart Data models Smart Spot entity schema intended for validation tools**  
+version: 0.1.0  
+<!-- /20-Description -->  
+<!-- 30-PropertiesList -->  
 
 ## List of properties  
 
-- `alternateName`: An alternative name for this item  - `announcedUrl`: URL broadcasted by the device  - `announcementPeriod`: Period between announcements in milliseconds  - `availability`: Specifies the time intervals in which this interactive service is available, but this is a general information while Smart Spots have their own real availability in order to allow advanced configurations  - `bluetoothChannel`: Bluetooth channels where to transmit the announcement  - `coverageRadius`: Radius of the spot coverage area in meters  - `dataProvider`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description`: A description of this item  - `id`: Unique identifier of the entity  - `name`: The name of this item.  - `owner`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refSmartPointOfInteraction`: Reference to the Smart Point of Interaction which includes this Smart Spot  - `seeAlso`: list of uri pointing to additional resources about the item  - `signalStrength`: Signal strength to adjust the announcement range. Enum:'highest, lowest, medium'  - `source`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type`: NGSI Entity type. It has to be SmartSpot    
+<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
+- `alternateName[string]`: An alternative name for this item  - `announcedUrl[string]`: URL broadcasted by the device  . Model: [https://schema.org/URL](https://schema.org/URL)- `announcementPeriod[integer]`: Period between announcements in milliseconds  . Model: [https://schema.org/Number](https://schema.org/Number)- `availability[string]`: Specifies the time intervals in which this interactive service is available, but this is a general information while Smart Spots have their own real availability in order to allow advanced configurations  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `bluetoothChannel[string]`: Bluetooth channels where to transmit the announcement  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `coverageRadius[integer]`: Radius of the spot coverage area in meters  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refSmartPointOfInteraction[*]`: Reference to the Smart Point of Interaction which includes this Smart Spot  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `signalStrength[string]`: Signal strength to adjust the announcement range. Enum:'highest, lowest, medium'  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity type. It has to be SmartSpot  <!-- /30-PropertiesList -->  
+<!-- 35-RequiredProperties -->  
 Required properties  
-- `id`  - `type`    
+- `id`  - `type`  <!-- /35-RequiredProperties -->  
+<!-- 40-RequiredProperties -->  
 Smart Spots are devices which provide the technology which allows users to get access to smart points of interaction so that they can obtain extra information (infotainment, etc.), provide suggestions (suggestions mailbox, etc.) or generate new content (co-creation, etc.). The data model contains resources to configure the interaction service such as the broadcasted URL (typically shortened), the period between broadcasts, the availability of the service, transmission power depending on the area to be covered, etc.  
+<!-- /40-RequiredProperties -->  
+<!-- 50-DataModelHeader -->  
 ## Data Model description of properties  
 Sorted alphabetically (click for details)  
+<!-- /50-DataModelHeader -->  
+<!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
 ```yaml  
 SmartSpot:    
@@ -163,11 +178,22 @@ SmartSpot:
     - id    
     - type    
   type: object    
+  x-derived-from: ""    
+  x-disclaimer: 'Redistribution and use in source and binary forms, with or without modification, are permitted  provided that the license conditions are met. Copyleft (c) 2021 Contributors to Smart Data Models Program'    
+  x-license-url: https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartSpot/LICENSE.md    
+  x-model-schema: https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartSpot/schema.json    
+  x-model-tags: ""    
+  x-version: 0.1.0    
 ```  
 </details>    
+<!-- /60-ModelYaml -->  
+<!-- 70-MiddleNotes -->  
+<!-- /70-MiddleNotes -->  
+<!-- 80-Examples -->  
 ## Example payloads    
 #### SmartSpot NGSI-v2 key-values Example    
 Here is an example of a SmartSpot in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SSPOT-F94C51A295D9",  
@@ -181,8 +207,10 @@ SmartSpot:
   "refSmartPointOfInteraction": "SPOI-ES-4326"  
 }  
 ```  
+</details>  
 #### SmartSpot NGSI-v2 normalized Example    
 Here is an example of a SmartSpot in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
   "id": "SSPOT-F94C51A295D9",  
@@ -211,64 +239,75 @@ SmartSpot:
   }  
 }  
 ```  
+</details>  
 #### SmartSpot NGSI-LD key-values Example    
 Here is an example of a SmartSpot in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
-  "type": "SmartSpot",  
-  "announcementPeriod": {  
-    "type": "Property",  
-    "value": 500  
-  },  
-  "signalStrength": {  
-    "type": "Property",  
-    "value": "highest"  
-  },  
-  "announcedUrl": {  
-    "type": "Property",  
-    "value": "http://goo.gl/EJ81JP"  
-  },  
-  "availability": {  
-    "type": "Property",  
-    "value": "Tu,Th 16:00-20:00"  
-  },  
-  "coverageRadius": {  
-    "type": "Property",  
-    "value": 30  
-  },  
-  "bluetoothChannel": {  
-    "type": "Property",  
-    "value": "37,38,39"  
-  },  
-  "refSmartPointOfInteraction": {  
-    "type": "Relationship",  
-    "object": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326"  
-  },  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ]  
+    "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
+    "type": "SmartSpot",  
+    "announcedUrl": {  
+        "type": "Property",  
+        "value": "http://goo.gl/EJ81JP"  
+    },  
+    "announcementPeriod": {  
+        "type": "Property",  
+        "value": 500  
+    },  
+    "availability": {  
+        "type": "Property",  
+        "value": "Tu,Th 16:00-20:00"  
+    },  
+    "bluetoothChannel": {  
+        "type": "Property",  
+        "value": "37,38,39"  
+    },  
+    "coverageRadius": {  
+        "type": "Property",  
+        "value": 30  
+    },  
+    "refSmartPointOfInteraction": {  
+        "type": "Relationship",  
+        "object": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326"  
+    },  
+    "signalStrength": {  
+        "type": "Property",  
+        "value": "highest"  
+    },  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
+    ]  
 }  
 ```  
+</details>  
 #### SmartSpot NGSI-LD normalized Example    
 Here is an example of a SmartSpot in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+<details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "@context": [  
-    "https://smartdatamodels.org/context.jsonld",  
-    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld"  
-  ],  
-  "announcedUrl": "http://goo.gl/EJ81JP",  
-  "announcementPeriod": 500,  
-  "availability": "Tu,Th 16:00-20:00",  
-  "bluetoothChannel": "37,38,39",  
-  "coverageRadius": 30,  
-  "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
-  "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
-  "signalStrength": "highest",  
-  "type": "SmartSpot"  
+    "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
+    "type": "SmartSpot",  
+    "announcedUrl": "http://goo.gl/EJ81JP",  
+    "announcementPeriod": 500,  
+    "availability": "Tu,Th 16:00-20:00",  
+    "bluetoothChannel": "37,38,39",  
+    "coverageRadius": 30,  
+    "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+    "signalStrength": "highest",  
+    "@context": [  
+        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
+    ]  
 }  
 ```  
-
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units
+</details><!-- /80-Examples -->  
+<!-- 90-FooterNotes -->  
+<!-- /90-FooterNotes -->  
+<!-- 95-Units -->  
+See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+<!-- /95-Units -->  
+<!-- 97-LastFooter -->  
+---  
+[Smart Data Models](https://smartdatamodels.org) +++ [Contribution Manual](https://bit.ly/contribution_manual) +++ [About](https://bit.ly/Introduction_SDM)<!-- /97-LastFooter -->  
