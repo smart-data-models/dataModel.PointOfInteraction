@@ -1,5 +1,7 @@
 {
     "@context": {
+        "SmartPointOfInteraction": "https://smartdatamodels.org/dataModel.PointOfInteraction/SmartPointOfInteraction",
+        "SmartSpot": "https://smartdatamodels.org/dataModel.PointOfInteraction/SmartSpot",
         "address": "https://smartdatamodels.org/address",
         "alternateName": "https://smartdatamodels.org/alternateName",
         "announcedUrl": "https://smartdatamodels.org/dataModel.PointOfInteraction/announcedUrl",
