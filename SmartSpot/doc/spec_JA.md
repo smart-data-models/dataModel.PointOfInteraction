@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entity: SmartSpot  
-=================<!-- /10-Header -->  
+エンティティSmartSpot  
+===============<!-- /10-Header -->  
 <!-- 15-License -->  
-[Open License](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartSpot/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[オープンライセンス](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartSpot/LICENSE.md)  
+[ドキュメント自動生成](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Global description: **Smart Data models Smart Spot entity schema intended for validation tools**  
-version: 0.1.0  
+グローバルな記述です。**スマートデータモデル スマートスポットのエンティティスキーマ（検証ツール用）**。  
+バージョン: 0.1.0  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## List of properties  
+## プロパティ一覧  
 
-<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `alternateName[string]`: An alternative name for this item  - `announcedUrl[string]`: URL broadcasted by the device  . Model: [https://schema.org/URL](https://schema.org/URL)- `announcementPeriod[integer]`: Period between announcements in milliseconds  . Model: [https://schema.org/Number](https://schema.org/Number)- `availability[string]`: Specifies the time intervals in which this interactive service is available, but this is a general information while Smart Spots have their own real availability in order to allow advanced configurations  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `bluetoothChannel[string]`: Bluetooth channels where to transmit the announcement  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `coverageRadius[integer]`: Radius of the spot coverage area in meters  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refSmartPointOfInteraction[*]`: Reference to the Smart Point of Interaction which includes this Smart Spot  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `signalStrength[string]`: Signal strength to adjust the announcement range. Enum:'highest, lowest, medium'  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity type. It has to be SmartSpot  <!-- /30-PropertiesList -->  
+<sup><sub>[*] 属性にタイプがない場合、複数のタイプまたは異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
+- `alternateName[string]`: この項目の別称  - `announcedUrl[string]`: 機器からブロードキャストされるURL  . Model: [https://schema.org/URL](https://schema.org/URL)- `announcementPeriod[integer]`: アナウンス間の期間（単位：ミリ秒  . Model: [https://schema.org/Number](https://schema.org/Number)- `availability[string]`: このインタラクティブサービスが利用できる時間間隔を指定しますが、これは一般的な情報であり、スマートスポットは高度な設定を可能にするために、独自の実際の利用可能時間を設定します。  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `bluetoothChannel[string]`: アナウンスを送信するBluetoothチャンネル  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `coverageRadius[integer]`: スポットカバレッジエリアの半径（メートル  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `name[string]`: このアイテムの名称です。  - `owner[array]`: 所有者の一意のIDを参照するJSONエンコードされた文字列を含むリストです。  - `refSmartPointOfInteraction[*]`: 本スマートスポットを含むスマートポイントオブインタラクションに関する言及  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: 項目に関する追加リソースを指すURIのリスト。  - `signalStrength[string]`: アナウンス範囲を調整するための信号強度。Enum:'highest, lowest, medium' （最高、最低、中程度  - `source[string]`: エンティティデータの元のソースをURLで示す一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entityタイプ。SmartSpotである必要があります。  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Required properties  
+必要なプロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-Smart Spots are devices which provide the technology which allows users to get access to smart points of interaction so that they can obtain extra information (infotainment, etc.), provide suggestions (suggestions mailbox, etc.) or generate new content (co-creation, etc.). The data model contains resources to configure the interaction service such as the broadcasted URL (typically shortened), the period between broadcasts, the availability of the service, transmission power depending on the area to be covered, etc.  
+スマートスポットは、ユーザーがスマートなインタラクションポイントにアクセスすることで、追加情報の取得（インフォテインメントなど）、提案（提案メールボックスなど）、新しいコンテンツの生成（コ・クリエーションなど）を可能にする技術を提供するデバイスである。データモデルには、放送されるURL（通常は短縮される）、放送間隔、サービスの可用性、カバーされるエリアに応じた送信電力など、インタラクションサービスを構成するためのリソースが含まれる。  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
+## プロパティのデータモデル記述  
+アルファベット順に並びます（クリックで詳細へ）  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -190,9 +190,9 @@ SmartSpot:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Example payloads    
-#### SmartSpot NGSI-v2 key-values Example    
-Here is an example of a SmartSpot in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+## ペイロードの例  
+#### SmartSpot NGSI-v2キーバリューの例  
+ここでは、SmartSpotをJSON-LD形式でkey-valuesにした例を示します。これは、`options=keyValues`を使用したときにNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -208,8 +208,8 @@ SmartSpot:
 }  
 ```  
 </details>  
-#### SmartSpot NGSI-v2 normalized Example    
-Here is an example of a SmartSpot in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+#### SmartSpot NGSI-v2 正規化例  
+以下は、SmartSpotをJSON-LD形式で正規化した例です。これはオプションを使用しない場合、NGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -240,8 +240,8 @@ SmartSpot:
 }  
 ```  
 </details>  
-#### SmartSpot NGSI-LD key-values Example    
-Here is an example of a SmartSpot in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### SmartSpot NGSI-LD キー値の例  
+ここでは、SmartSpotをJSON-LD形式でkey-valuesにした例を示します。これは `options=keyValues` を使用した場合にNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -282,8 +282,8 @@ SmartSpot:
 }  
 ```  
 </details>  
-#### SmartSpot NGSI-LD normalized Example    
-Here is an example of a SmartSpot in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### SmartSpot NGSI-LD 正規化例  
+以下は、SmartSpotをJSON-LD形式で正規化した例です。これはオプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -306,7 +306,7 @@ SmartSpot:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+マグニチュード単位の扱いについては、[FAQ 10](https://smartdatamodels.org/index.php/faqs/)を参照してください。  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

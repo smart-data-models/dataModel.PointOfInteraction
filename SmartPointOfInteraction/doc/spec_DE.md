@@ -1,30 +1,30 @@
 <!-- 10-Header -->  
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)  
-Entity: SmartPointOfInteraction  
-===============================<!-- /10-Header -->  
+Entität: SmartPointOfInteraction  
+================================<!-- /10-Header -->  
 <!-- 15-License -->  
-[Open License](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md)  
-[document generated automatically](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
+[Offene Lizenz](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md)  
+[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)  
 <!-- /15-License -->  
 <!-- 20-Description -->  
-Global description: **Smart Data Models Smart Point of Interaction entity schema intended for validation tools**  
-version: 0.0.2  
+Globale Beschreibung: **Smart Data Models Smart Point of Interaction Entitätsschema für Validierungswerkzeuge**  
+Version: 0.0.2  
 <!-- /20-Description -->  
 <!-- 30-PropertiesList -->  
 
-## List of properties  
+## Liste der Eigenschaften  
 
-<sup><sub>[*] If there is not a type in an attribute is because it could have several types or different formats/patterns</sub></sup>  
-- `address[object]`: The mailing address  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: An alternative name for this item  - `applicationUrl[string]`: This field specifies the real URL containing the solution or application (information, co-creation, etc) while the SmartSpot 'announcedUrl' field specifies the broadcast URL which could be this same URL or a shortened one  . Model: [https://schema.org/URL](https://schema.org/URL)- `areaCovered[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `areaServed[string]`: The geographic area where a service or offered item is provided  . Model: [https://schema.org/Text](https://schema.org/Text)- `availability[string]`: Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. For instance, a service which is only active on weekdays will be encoded as 'availability': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `category[array]`: Defines the type of interaction. Enum:'co-creation, entertainment, information, infotainment'  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: A sequence of characters identifying the provider of the harmonised data entity.  - `dateCreated[string]`: Entity creation timestamp. This will usually be allocated by the storage platform.  - `dateModified[string]`: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.  - `description[string]`: A description of this item  - `id[*]`: Unique identifier of the entity  - `location[*]`: Geojson reference to the item. It can be Point, LineString, Polygon, MultiPoint, MultiLineString or MultiPolygon  - `name[string]`: The name of this item.  - `owner[array]`: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)  - `refRelatedEntity[array]`: List of entities improved with this Smart Point of Interaction  . Model: [The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text](The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text)- `refSmartSpot[array]`:  References to the Smart Spot devices which are part of the Smart Point of Interaction  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: list of uri pointing to additional resources about the item  - `source[string]`: A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.  - `type[string]`: NGSI Entity type. It has to be SmartPointOfInteraction  <!-- /30-PropertiesList -->  
+<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.  
+- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `applicationUrl[string]`: Dieses Feld gibt die tatsächliche URL an, die die Lösung oder Anwendung enthält (Information, Co-Creation usw.), während das SmartSpot-Feld "announcedUrl" die Broadcast-URL angibt, die dieselbe oder eine verkürzte URL sein kann.  . Model: [https://schema.org/URL](https://schema.org/URL)- `areaCovered[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `availability[string]`: Gibt die Zeitintervalle an, in denen dieser interaktive Dienst generell verfügbar ist. Es ist zu beachten, dass Smart Spots ihre eigene tatsächliche Verfügbarkeit haben, um erweiterte Konfigurationen zu ermöglichen. Die Syntax muss mit schema.org konform sein. So wird beispielsweise ein Dienst, der nur an Wochentagen aktiv ist, als "Verfügbarkeit" kodiert: 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `category[array]`: Definiert die Art der Interaktion. Enum:'Mitgestaltung, Unterhaltung, Information, Infotainment'  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit.  - `dateCreated[string]`: Zeitstempel der Entitätserstellung. Dieser wird in der Regel von der Speicherplattform zugewiesen.  - `dateModified[string]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben.  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels.  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refRelatedEntity[array]`: Liste der Unternehmen, die mit diesem Smart Point of Interaction verbessert wurden  . Model: [The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text](The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text)- `refSmartSpot[array]`:  Verweise auf die Smart Spot-Geräte, die Teil des Smart Point of Interaction sind  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Entitätstyp. Es muss SmartPointOfInteraction sein  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
-Required properties  
+Erforderliche Eigenschaften  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
 <!-- 40-RequiredProperties -->  
-A Smart Point of Interaction defines a place with technology to interact with users, for example, through Beacon technology from Apple, Eddystone/Physical-Web from Google or other proximity-based interfaces. Since the interactive area could be composed by more than one device providing the technology, this model encompasses a group of SmartSpot devices. The data model includes information regarding the area/surface covered by the technology (i.e., the area covered by Bluetooth Low Energy-based Beacon), a way to specify the functionality intervals (i.e. when interactive points are available) and a link to a multimedia resource intended to user interaction (i.e. Web Apps, etc.). Additionally, the data model may reference to another NGSI entity such as a Parking, a Point of Interest (POI), etc. with enriched interaction provided by this Smart Point of Interaction.  
+Ein Smart Point of Interaction definiert einen Ort mit Technologie zur Interaktion mit Nutzern, z. B. durch Beacon-Technologie von Apple, Eddystone/Physical-Web von Google oder andere auf Nähe basierende Schnittstellen. Da der interaktive Bereich aus mehr als einem Gerät bestehen kann, das die Technologie bereitstellt, umfasst dieses Modell eine Gruppe von SmartSpot-Geräten. Das Datenmodell enthält Informationen über den Bereich/die Fläche, der/die von der Technologie abgedeckt wird (d. h. der Bereich, der von einem Bluetooth Low Energy-basierten Beacon abgedeckt wird), eine Möglichkeit zur Angabe der Funktionsintervalle (d. h. wann interaktive Punkte verfügbar sind) und einen Link zu einer Multimedia-Ressource, die für die Benutzerinteraktion bestimmt ist (d. h. Web Apps usw.). Darüber hinaus kann das Datenmodell auf eine andere NGSI-Entität verweisen, z. B. einen Parkplatz, einen Point of Interest (POI) usw., wobei die Interaktion durch diesen intelligenten Interaktionspunkt angereichert wird.  
 <!-- /40-RequiredProperties -->  
 <!-- 50-DataModelHeader -->  
-## Data Model description of properties  
-Sorted alphabetically (click for details)  
+## Datenmodell Beschreibung der Eigenschaften  
+Alphabetisch sortiert (für Details anklicken)  
 <!-- /50-DataModelHeader -->  
 <!-- 60-ModelYaml -->  
 <details><summary><strong>full yaml details</strong></summary>    
@@ -364,9 +364,9 @@ SmartPointOfInteraction:
 <!-- 70-MiddleNotes -->  
 <!-- /70-MiddleNotes -->  
 <!-- 80-Examples -->  
-## Example payloads    
-#### SmartPointOfInteraction NGSI-v2 key-values Example    
-Here is an example of a SmartPointOfInteraction in JSON-LD format as key-values. This is compatible with NGSI-v2 when  using `options=keyValues` and returns the context data of an individual entity.  
+## Beispiel-Nutzlasten  
+#### SmartPointOfInteraction NGSI-v2 key-values Beispiel  
+Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -390,8 +390,8 @@ SmartPointOfInteraction:
 }  
 ```  
 </details>  
-#### SmartPointOfInteraction NGSI-v2 normalized Example    
-Here is an example of a SmartPointOfInteraction in JSON-LD format as normalized. This is compatible with NGSI-v2 when not using options and returns the context data of an individual entity.  
+#### SmartPointOfInteraction NGSI-v2 normalisiert Beispiel  
+Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -431,8 +431,8 @@ SmartPointOfInteraction:
 }  
 ```  
 </details>  
-#### SmartPointOfInteraction NGSI-LD key-values Example    
-Here is an example of a SmartPointOfInteraction in JSON-LD format as key-values. This is compatible with NGSI-LD when  using `options=keyValues` and returns the context data of an individual entity.  
+#### SmartPointOfInteraction NGSI-LD key-values Beispiel  
+Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format als Schlüsselwerte. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -499,8 +499,8 @@ SmartPointOfInteraction:
 }  
 ```  
 </details>  
-#### SmartPointOfInteraction NGSI-LD normalized Example    
-Here is an example of a SmartPointOfInteraction in JSON-LD format as normalized. This is compatible with NGSI-LD when not using options and returns the context data of an individual entity.  
+#### SmartPointOfInteraction NGSI-LD normalisiert Beispiel  
+Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
@@ -552,7 +552,7 @@ SmartPointOfInteraction:
 <!-- 90-FooterNotes -->  
 <!-- /90-FooterNotes -->  
 <!-- 95-Units -->  
-See [FAQ 10](https://smartdatamodels.org/index.php/faqs/) to get an answer on how to deal with magnitude units  
+Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht  
 <!-- /95-Units -->  
 <!-- 97-LastFooter -->  
 ---  

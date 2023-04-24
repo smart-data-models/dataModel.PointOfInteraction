@@ -1,17 +1,24 @@
 # SmartPointOfInteraction
+Version: 0.0.2
 
 ## Description 
 
-A smart point of interaction is composed mainly by two entities: "Smart Point of Interaction": defines an
-interactive point which provides information, entertainment or co-creation tools to citizens.
-Optionally it can reference a related smart city asset with enriched interaction provided by this technology.
-"Smart Spot": a set of resources related to a physical device and the technology to provide a Smart Point of Interaction.
-
+Smart Data Models Smart Point of Interaction entity schema intended for validation tools
 ### Specification
 
 Link to the [interactive specification](https://swagger.lab.fiware.org/?url=https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/swagger.yaml)
 
 Link to the [specification](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/doc/spec.md)
+
+Enlace a la [Especificación en español](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/doc/spec_ES.md)
+
+Lien vers le [spécification en français](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/doc/spec_FR.md)
+
+Link zur [deutschen Spezifikation](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/doc/spec_DE.md)
+
+Link alla [specifica](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/doc/spec_IT.md)
+
+[仕様へのリンク](https://github.com/smart-data-models/dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/doc/spec_JA.md)
 ### Examples
 
 Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/examples/example.json) (keyvalues) for NGSI v2
@@ -21,6 +28,13 @@ Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInter
 Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/examples/example-normalized.json) (normalized) for NGSI-V2
 
 Link to the [example](https://smart-data-models.github.io/dataModel.PointOfInteraction/SmartPointOfInteraction/examples/example-normalized.jsonld) (normalized) for NGSI-LD
+### Dynamic Examples generation
+
+Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartPointOfInteraction/schema.json&email=info@smartdatamodels.org) of NGSI-LD normalized payloads compliant with this data model. Refresh for new values
+
+Link to the [Generator](https://smartdatamodels.org/extra/ngsi-ld_generator_keyvalues.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartPointOfInteraction/schema.json&email=info@smartdatamodels.org) of NGSI-LD keyvalues payloads compliant with this data model. Refresh for new values
+
+Link to the [Generator](https://smartdatamodels.org/extra/geojson_features_generator.php?schemaUrl=https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/SmartPointOfInteraction/schema.json&email=info@smartdatamodels.org) of geojson feature format payloads compliant with this data model. Refresh for new values
 ### Contribution
 
  If you have any issue on this data model you can raise an [issue](https://github.com/smart-data-models/dataModel.PointOfInteraction/issues)  or contribute with a [PR](https://github.com/smart-data-models/dataModel.PointOfInteraction/pulls)
