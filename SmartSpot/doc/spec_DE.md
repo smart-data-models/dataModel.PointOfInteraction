@@ -212,29 +212,35 @@ SmartSpot:
 Hier ist ein Beispiel für einen SmartSpot im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
-{  
+{  
   "id": "SSPOT-F94C51A295D9",  
   "type": "SmartSpot",  
   "announcementPeriod": {  
+    "type": "Number",  
     "value": 500  
   },  
   "signalStrength": {  
+    "type": "Text",  
     "value": "highest"  
   },  
   "announcedUrl": {  
+    "type": "URL",  
     "value": "http://goo.gl/EJ81JP"  
   },  
   "availability": {  
+    "type": "Text",  
     "value": "Tu,Th 16:00-20:00"  
   },  
   "coverageRadius": {  
+    "type": "Number",  
     "value": 30  
   },  
   "bluetoothChannel": {  
+    "type": "Text",  
     "value": "37,38,39"  
   },  
   "refSmartPointOfInteraction": {  
-    "type": "Relationship",  
+    "type": "Text",  
     "value": "SPOI-ES-4326"  
   }  
 }  
@@ -245,40 +251,19 @@ SmartSpot:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
-    "type": "SmartSpot",  
-    "announcedUrl": {  
-        "type": "Property",  
-        "value": "http://goo.gl/EJ81JP"  
-    },  
-    "announcementPeriod": {  
-        "type": "Property",  
-        "value": 500  
-    },  
-    "availability": {  
-        "type": "Property",  
-        "value": "Tu,Th 16:00-20:00"  
-    },  
-    "bluetoothChannel": {  
-        "type": "Property",  
-        "value": "37,38,39"  
-    },  
-    "coverageRadius": {  
-        "type": "Property",  
-        "value": 30  
-    },  
-    "refSmartPointOfInteraction": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326"  
-    },  
-    "signalStrength": {  
-        "type": "Property",  
-        "value": "highest"  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
+  "type": "SmartSpot",  
+  "announcedUrl": "http://goo.gl/EJ81JP",  
+  "announcementPeriod": 500,  
+  "availability": "Tu,Th 16:00-20:00",  
+  "bluetoothChannel": "37,38,39",  
+  "coverageRadius": 30,  
+  "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+  "signalStrength": "highest",  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
@@ -287,19 +272,36 @@ SmartSpot:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
-    "type": "SmartSpot",  
-    "announcedUrl": "http://goo.gl/EJ81JP",  
-    "announcementPeriod": 500,  
-    "availability": "Tu,Th 16:00-20:00",  
-    "bluetoothChannel": "37,38,39",  
-    "coverageRadius": 30,  
-    "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
-    "signalStrength": "highest",  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
-    ]  
+  "id": "SSPOT-F94C51A295D9",  
+  "type": "SmartSpot",  
+  "announcementPeriod": {  
+    "type": "Property",  
+    "value": 500  
+  },  
+  "signalStrength": {  
+    "type": "Property",  
+    "value": "highest"  
+  },  
+  "announcedUrl": {  
+    "type": "Property",  
+    "value": "http://goo.gl/EJ81JP"  
+  },  
+  "availability": {  
+    "type": "Property",  
+    "value": "Tu,Th 16:00-20:00"  
+  },  
+  "coverageRadius": {  
+    "type": "Property",  
+    "value": 30  
+  },  
+  "bluetoothChannel": {  
+    "type": "Property",  
+    "value": "37,38,39"  
+  },  
+  "refSmartPointOfInteraction": {  
+    "type": "Relationship",  
+    "value": "SPOI-ES-4326"  
+  }  
 }  
 ```  
 </details><!-- /80-Examples -->  
