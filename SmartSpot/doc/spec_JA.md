@@ -15,7 +15,7 @@
 ## プロパティ一覧  
 
 <sup><sub>[*] 属性に型がない場合は、複数の型や異なるフォーマット/パターンを持つ可能性があるためです</sub></sup>。  
-- `alternateName[string]`: このアイテムの別称  - `announcedUrl[string]`: 端末が放送するURL  . Model: [https://schema.org/URL](https://schema.org/URL)- `announcementPeriod[number]`: アナウンス間の期間（ミリ秒単位  . Model: [https://schema.org/Number](https://schema.org/Number)- `availability[string]`: このインタラクティブサービスが利用可能な時間間隔を指定しますが、これは一般的な情報であり、スマートスポットは高度な設定を可能にするために、独自の実際の利用可能時間があります。  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `bluetoothChannel[string]`: アナウンスを送信するBluetoothチャンネル  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `coverageRadius[number]`: スポットのカバーエリアの半径（メートル  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `refSmartPointOfInteraction[*]`: このスマートスポットを含むスマートポイントオブインタラクションへの言及  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `signalStrength[string]`: アナウンス範囲を調整するための信号強度。Enum：'最高、最低、中'  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entityの種類です。SmartSpotでなければならない  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: このアイテムの別称  - `announcedUrl[string]`: 端末から放送されるURL  . Model: [https://schema.org/URL](https://schema.org/URL)- `announcementPeriod[number]`: アナウンス間の期間（ミリ秒単位  . Model: [https://schema.org/Number](https://schema.org/Number)- `availability[string]`: このインタラクティブサービスが利用可能な時間間隔を指定しますが、これは一般的な情報であり、スマートスポットは高度な設定を可能にするために、独自の実際の利用可能時間があります。  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `bluetoothChannel[string]`: アナウンスを送信するBluetoothチャンネル  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `coverageRadius[number]`: スポットのカバーエリアの半径（メートル  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: 調和されたデータエンティティの提供者を識別する一連の文字。  - `dateCreated[string]`: エンティティの作成タイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `dateModified[string]`: エンティティの最終更新のタイムスタンプ。これは通常、ストレージプラットフォームによって割り当てられる。  - `description[string]`: このアイテムの説明  - `id[*]`: エンティティの一意な識別子  - `name[string]`: この項目の名称です。  - `owner[array]`: 所有者の固有IDを参照するJSONエンコードされた文字列を含むリストです。  - `refSmartPointOfInteraction[*]`: このスマートスポットを含むスマートポイントオブインタラクションへの言及  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: アイテムに関する追加リソースを指す URI のリスト。  - `signalStrength[string]`: アナウンス範囲を調整するための信号強度。Enum：'最高、最低、中'  - `source[string]`: エンティティデータの元のソースをURLとして与える一連の文字。ソースプロバイダの完全修飾ドメイン名、またはソースオブジェクトのURLであることが推奨されます。  - `type[string]`: NGSI Entityの種類です。SmartSpotでなければならない  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 必須プロパティ  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -212,29 +212,35 @@ SmartSpot:
 ここでは、SmartSpotをJSON-LD形式で正規化した例を示します。これは、オプションを使用しない場合のNGSI-v2と互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
-{  
+{  
   "id": "SSPOT-F94C51A295D9",  
   "type": "SmartSpot",  
   "announcementPeriod": {  
+    "type": "Number",  
     "value": 500  
   },  
   "signalStrength": {  
+    "type": "Text",  
     "value": "highest"  
   },  
   "announcedUrl": {  
+    "type": "URL",  
     "value": "http://goo.gl/EJ81JP"  
   },  
   "availability": {  
+    "type": "Text",  
     "value": "Tu,Th 16:00-20:00"  
   },  
   "coverageRadius": {  
+    "type": "Number",  
     "value": 30  
   },  
   "bluetoothChannel": {  
+    "type": "Text",  
     "value": "37,38,39"  
   },  
   "refSmartPointOfInteraction": {  
-    "type": "Relationship",  
+    "type": "Text",  
     "value": "SPOI-ES-4326"  
   }  
 }  
@@ -245,61 +251,57 @@ SmartSpot:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
-    "type": "SmartSpot",  
-    "announcedUrl": {  
-        "type": "Property",  
-        "value": "http://goo.gl/EJ81JP"  
-    },  
-    "announcementPeriod": {  
-        "type": "Property",  
-        "value": 500  
-    },  
-    "availability": {  
-        "type": "Property",  
-        "value": "Tu,Th 16:00-20:00"  
-    },  
-    "bluetoothChannel": {  
-        "type": "Property",  
-        "value": "37,38,39"  
-    },  
-    "coverageRadius": {  
-        "type": "Property",  
-        "value": 30  
-    },  
-    "refSmartPointOfInteraction": {  
-        "type": "Relationship",  
-        "object": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326"  
-    },  
-    "signalStrength": {  
-        "type": "Property",  
-        "value": "highest"  
-    },  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
-    ]  
+  "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
+  "type": "SmartSpot",  
+  "announcedUrl": "http://goo.gl/EJ81JP",  
+  "announcementPeriod": 500,  
+  "availability": "Tu,Th 16:00-20:00",  
+  "bluetoothChannel": "37,38,39",  
+  "coverageRadius": 30,  
+  "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
+  "signalStrength": "highest",  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details>  
-#### SmartSpot NGSI-LDの正規化例。  
+#### SmartSpot NGSI-LD 正規化例  
 ここでは、SmartSpotをJSON-LD形式で正規化した例を示します。これは、オプションを使用しない場合のNGSI-LDと互換性があり、個々のエンティティのコンテキストデータを返します。  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-    "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
-    "type": "SmartSpot",  
-    "announcedUrl": "http://goo.gl/EJ81JP",  
-    "announcementPeriod": 500,  
-    "availability": "Tu,Th 16:00-20:00",  
-    "bluetoothChannel": "37,38,39",  
-    "coverageRadius": 30,  
-    "refSmartPointOfInteraction": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",  
-    "signalStrength": "highest",  
-    "@context": [  
-        "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
-        "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
-    ]  
+  "id": "SSPOT-F94C51A295D9",  
+  "type": "SmartSpot",  
+  "announcementPeriod": {  
+    "type": "Property",  
+    "value": 500  
+  },  
+  "signalStrength": {  
+    "type": "Property",  
+    "value": "highest"  
+  },  
+  "announcedUrl": {  
+    "type": "Property",  
+    "value": "http://goo.gl/EJ81JP"  
+  },  
+  "availability": {  
+    "type": "Property",  
+    "value": "Tu,Th 16:00-20:00"  
+  },  
+  "coverageRadius": {  
+    "type": "Property",  
+    "value": 30  
+  },  
+  "bluetoothChannel": {  
+    "type": "Property",  
+    "value": "37,38,39"  
+  },  
+  "refSmartPointOfInteraction": {  
+    "type": "Relationship",  
+    "value": "SPOI-ES-4326"  
+  }  
 }  
 ```  
 </details><!-- /80-Examples -->  
