@@ -1,26 +1,33 @@
+
 {
   "id": "SSPOT-F94C51A295D9",
   "type": "SmartSpot",
   "announcementPeriod": {
+    "type": "Number",
     "value": 500
   },
   "signalStrength": {
+    "type": "Text",
     "value": "highest"
   },
   "announcedUrl": {
+    "type": "URL",
     "value": "http://goo.gl/EJ81JP"
   },
   "availability": {
+    "type": "Text",
     "value": "Tu,Th 16:00-20:00"
   },
   "coverageRadius": {
+    "type": "Number",
     "value": 30
   },
   "bluetoothChannel": {
+    "type": "Text",
     "value": "37,38,39"
   },
   "refSmartPointOfInteraction": {
-    "type": "Relationship",
+    "type": "Text",
     "value": "SPOI-ES-4326"
   }
 }

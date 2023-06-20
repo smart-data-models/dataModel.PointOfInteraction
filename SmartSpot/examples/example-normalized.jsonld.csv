@@ -1,2 +1,0 @@
-"@context__0_", "@context__1_", "announcedUrl_", "announcementPeriod_", "availability_", "bluetoothChannel_", "coverageRadius_", "id_", "refSmartPointOfInteraction_", "signalStrength_", "type_"
-"https://smartdatamodels.org/context.jsonld", "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld", "http://goo.gl/EJ81JP", "500", "Tu,Th 16:00-20:00", "37,38,39", "30", "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9", "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326", "highest", "SmartSpot"

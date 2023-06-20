@@ -1,2 +1,0 @@
-"id_", "type_", "announcementPeriod__value_", "signalStrength__value_", "announcedUrl__value_", "availability__value_", "coverageRadius__value_", "bluetoothChannel__value_", "refSmartPointOfInteraction__type_", "refSmartPointOfInteraction__value_"
-"SSPOT-F94C51A295D9", "SmartSpot", "500", "highest", "http://goo.gl/EJ81JP", "Tu,Th 16:00-20:00", "30", "37,38,39", "Relationship", "SPOI-ES-4326"
