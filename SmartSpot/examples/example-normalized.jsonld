@@ -27,7 +27,7 @@
   },
   "refSmartPointOfInteraction": {
     "type": "Relationship",
-    "value": "SPOI-ES-4326"
+    "object": "urn:ngsi-ld:SmartSpot:SPOI-ES-4326"
   },
   "@context": [
     "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
