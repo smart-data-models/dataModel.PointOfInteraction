@@ -47,7 +47,7 @@
                 },
                 "availability": {
                     "type": "string",
-                    "description": "Property. Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. Model:'https://schema.org/openingHours'. For instance, a service which is only active on weekdays will be encoded as 'availability': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'."
+                    "description": "Property. Specifies the time intervals in which this interactive service is generally available. It is noteworthy that Smart Spots have their own real availability in order to allow advanced configurations. The syntax must be conformant with schema.org. Model:'https://schema.org/openingHours'. For instance, a service which is only active on weekdays will be encoded as 'availability': 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'"
                 },
                 "refRelatedEntity": {
                     "type": "array",
