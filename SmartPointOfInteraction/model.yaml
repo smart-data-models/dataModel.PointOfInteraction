@@ -82,10 +82,10 @@ SmartPointOfInteraction:
               minItems: 2
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - Point
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON Point
@@ -108,10 +108,10 @@ SmartPointOfInteraction:
               minItems: 2
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - LineString
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON LineString
@@ -136,10 +136,10 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - Polygon
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON Polygon
@@ -161,10 +161,10 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiPoint
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiPoint
@@ -189,10 +189,10 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiLineString
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiLineString
@@ -219,10 +219,10 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: &properties_-_type_-_enum
+              enum:
                 - MultiPolygon
               type: string
-          required: &required
+          required:
             - type
             - coordinates
           title: GeoJSON MultiPolygon
@@ -313,9 +313,12 @@ SmartPointOfInteraction:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Point
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Point
           type: object
           x-ngsi:
@@ -336,9 +339,12 @@ SmartPointOfInteraction:
               minItems: 2
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - LineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON LineString
           type: object
           x-ngsi:
@@ -361,9 +367,12 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - Polygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON Polygon
           type: object
           x-ngsi:
@@ -383,9 +392,12 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPoint
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPoint
           type: object
           x-ngsi:
@@ -408,9 +420,12 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiLineString
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiLineString
           type: object
           x-ngsi:
@@ -435,9 +450,12 @@ SmartPointOfInteraction:
                 type: array
               type: array
             type:
-              enum: *properties_-_type_-_enum
+              enum:
+                - MultiPolygon
               type: string
-          required: *required
+          required:
+            - type
+            - coordinates
           title: GeoJSON MultiPolygon
           type: object
           x-ngsi:
