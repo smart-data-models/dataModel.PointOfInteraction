@@ -15,7 +15,7 @@
 ## Liste des propriétés  
 
 <sup><sub>[*] S'il n'y a pas de type dans un attribut, c'est parce qu'il peut avoir plusieurs types ou différents formats/modèles</sub></sup>.  
-- `alternateName[string]`: Un nom alternatif pour ce poste  - `announcedUrl[string]`: URL diffusée par l'appareil  . Model: [https://schema.org/URL](https://schema.org/URL)- `announcementPeriod[number]`: Période entre les annonces en millisecondes  . Model: [https://schema.org/Number](https://schema.org/Number)- `availability[string]`: Spécifie les intervalles de temps pendant lesquels ce service interactif est disponible, mais il s'agit d'une information générale alors que les Smart Spots ont leur propre disponibilité réelle afin de permettre des configurations avancées.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `bluetoothChannel[string]`: Canaux Bluetooth où transmettre l'annonce  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `coverageRadius[number]`: Rayon de la zone de couverture en mètres  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées.  - `dateCreated[string]`: Date de création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage.  - `dateModified[string]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage.  - `description[string]`: Une description de l'article  - `id[*]`: Identifiant unique de l'entité  - `name[string]`: Le nom de cet élément.  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `refSmartPointOfInteraction[*]`: Référence au point d'interaction intelligent qui comprend ce Smart Spot  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `signalStrength[string]`: Intensité du signal pour ajuster la portée de l'annonce. Enum : "plus fort, plus faible, moyen  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de SmartSpot  <!-- /30-PropertiesList -->  
+- `alternateName[string]`: Un nom alternatif pour ce poste  - `announcedUrl[uri]`: URL diffusée par l'appareil  . Model: [https://schema.org/URL](https://schema.org/URL)- `announcementPeriod[number]`: Période entre les annonces en millisecondes  . Model: [https://schema.org/Number](https://schema.org/Number)- `availability[string]`: Spécifie les intervalles de temps pendant lesquels ce service interactif est disponible, mais il s'agit d'une information générale alors que les Smart Spots ont leur propre disponibilité réelle afin de permettre des configurations avancées.  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `bluetoothChannel[string]`: Canaux Bluetooth où transmettre l'annonce  . Model: [ https://schema.org/Text]( https://schema.org/Text)- `coverageRadius[number]`: Rayon de la zone de couverture en mètres  . Model: [https://schema.org/Number](https://schema.org/Number)- `dataProvider[string]`: Une séquence de caractères identifiant le fournisseur de l'entité de données harmonisées  - `dateCreated[date-time]`: Horodatage de la création de l'entité. Celle-ci est généralement attribuée par la plate-forme de stockage  - `dateModified[date-time]`: Date de la dernière modification de l'entité. Cette date est généralement attribuée par la plate-forme de stockage  - `description[string]`: Une description de l'article  - `id[*]`: Identifiant unique de l'entité  - `name[string]`: Le nom de cet élément  - `owner[array]`: Une liste contenant une séquence de caractères encodés JSON référençant les identifiants uniques du ou des propriétaires.  - `refSmartPointOfInteraction[*]`: Référence au point d'interaction intelligent qui comprend ce Smart Spot  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: liste d'uri pointant vers des ressources supplémentaires concernant l'élément  - `signalStrength[string]`: Intensité du signal pour ajuster la portée de l'annonce. Enum : "plus fort, plus faible, moyen  - `source[string]`: Séquence de caractères indiquant la source originale des données de l'entité sous forme d'URL. Il est recommandé d'utiliser le nom de domaine complet du fournisseur de la source ou l'URL de l'objet source.  - `type[string]`: Type d'entité NGSI. Il doit s'agir de SmartSpot  <!-- /30-PropertiesList -->  
 <!-- 35-RequiredProperties -->  
 Propriétés requises  
 - `id`  - `type`  <!-- /35-RequiredProperties -->  
@@ -80,18 +80,18 @@ SmartSpot:
         model: https://schema.org/Number    
         type: Property    
     dataProvider:    
-      description: A sequence of characters identifying the provider of the harmonised data entity.    
+      description: A sequence of characters identifying the provider of the harmonised data entity    
       type: string    
       x-ngsi:    
         type: Property    
     dateCreated:    
-      description: Entity creation timestamp. This will usually be allocated by the storage platform.    
+      description: Entity creation timestamp. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
         type: Property    
     dateModified:    
-      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform.    
+      description: Timestamp of the last modification of the entity. This will usually be allocated by the storage platform    
       format: date-time    
       type: string    
       x-ngsi:    
@@ -102,41 +102,63 @@ SmartSpot:
       x-ngsi:    
         type: Property    
     id:    
-      anyOf: &smartspot_-_properties_-_owner_-_items_-_anyof    
-        - description: Property. Identifier format of any NGSI entity    
+      anyOf:    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Unique identifier of the entity    
       x-ngsi:    
         type: Property    
     name:    
-      description: The name of this item.    
+      description: The name of this item    
       type: string    
       x-ngsi:    
         type: Property    
     owner:    
       description: A List containing a JSON encoded sequence of characters referencing the unique Ids of the owner(s)    
       items:    
-        anyOf: *smartspot_-_properties_-_owner_-_items_-_anyof    
-        description: Property. Unique identifier of the entity    
+        anyOf:    
+          - description: Identifier format of any NGSI entity    
+            maxLength: 256    
+            minLength: 1    
+            pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
+            type: string    
+            x-ngsi:    
+              type: Property    
+          - description: Identifier format of any NGSI entity    
+            format: uri    
+            type: string    
+            x-ngsi:    
+              type: Property    
+        description: Unique identifier of the entity    
+        x-ngsi:    
+          type: Property    
       type: array    
       x-ngsi:    
         type: Property    
     refSmartPointOfInteraction:    
       anyOf:    
-        - description: Property. Identifier format of any NGSI entity    
+        - description: Identifier format of any NGSI entity    
           maxLength: 256    
           minLength: 1    
           pattern: ^[\w\-\.\{\}\$\+\*\[\]`|~^@!,:\\]+$    
           type: string    
-        - description: Property. Identifier format of any NGSI entity    
+          x-ngsi:    
+            type: Property    
+        - description: Identifier format of any NGSI entity    
           format: uri    
           type: string    
+          x-ngsi:    
+            type: Property    
       description: Reference to the Smart Point of Interaction which includes this Smart Spot    
       x-ngsi:    
         model: https://schema.org/URL    
@@ -163,7 +185,7 @@ SmartSpot:
       x-ngsi:    
         type: Property    
     source:    
-      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object.'    
+      description: 'A sequence of characters giving the original source of the entity data as a URL. Recommended to be the fully qualified domain name of the source provider, or the URL to the source object'    
       type: string    
       x-ngsi:    
         type: Property    
@@ -212,7 +234,7 @@ SmartSpot:
 Voici un exemple de SmartSpot au format JSON-LD tel que normalisé. Ce format est compatible avec NGSI-v2 lorsqu'il n'utilise pas d'options et renvoie les données contextuelles d'une entité individuelle.  
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
-{  
+{  
   "id": "SSPOT-F94C51A295D9",  
   "type": "SmartSpot",  
   "announcementPeriod": {  
@@ -272,7 +294,7 @@ SmartSpot:
 <details><summary><strong>show/hide example</strong></summary>    
 ```json  
 {  
-  "id": "SSPOT-F94C51A295D9",  
+  "id": "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9",  
   "type": "SmartSpot",  
   "announcementPeriod": {  
     "type": "Property",  
@@ -300,8 +322,12 @@ SmartSpot:
   },  
   "refSmartPointOfInteraction": {  
     "type": "Relationship",  
-    "value": "SPOI-ES-4326"  
-  }  
+    "object": "urn:ngsi-ld:SmartSpot:SPOI-ES-4326"  
+  },  
+  "@context": [  
+    "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",  
+    "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"  
+  ]  
 }  
 ```  
 </details><!-- /80-Examples -->  
