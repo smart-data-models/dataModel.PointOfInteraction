@@ -13,8 +13,16 @@
         "areaCovered": "https://smartdatamodels.org/dataModel.PointOfInteraction/areaCovered",
         "areaServed": "https://smartdatamodels.org/areaServed",
         "availability": "https://smartdatamodels.org/dataModel.PointOfInteraction/availability",
+        "bbox": {
+            "@container": "@list",
+            "@id": "geojson:bbox"
+        },
         "bluetoothChannel": "https://smartdatamodels.org/dataModel.PointOfInteraction/bluetoothChannel",
         "category": "https://smartdatamodels.org/dataModel.PointOfInteraction/category",
+        "coordinates": {
+            "@container": "@list",
+            "@id": "geojson:coordinates"
+        },
         "coverageRadius": "https://smartdatamodels.org/dataModel.PointOfInteraction/coverageRadius",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
         "dateCreated": "https://smartdatamodels.org/dateCreated",
