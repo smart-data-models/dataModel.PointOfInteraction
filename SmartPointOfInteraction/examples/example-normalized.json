@@ -2,13 +2,15 @@
   "id": "SPOI-ES-4326",
   "type": "SmartPointOfInteraction",
   "category": {
+    "type": "StructuredValue",
     "value": ["co-creation"]
   },
   "applicationUrl": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://www.example.org"
   },
   "areaCovered": {
+    "type": "geo:json",
     "value": {
       "type": "Polygon",
       "coordinates": [
@@ -22,14 +24,15 @@
     }
   },
   "availability": {
+    "type": "Text",
     "value": "Tu,Th 16:00-20:00"
   },
   "refSmartSpot": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": ["SSPOT-F94C58E29DD5", "SSPOT-F94C53E21DD2", "SSPOT-F94C51A295D9"]
   },
   "refRelatedEntity": {
-    "type": "Relationship",
+    "type": "StructuredValue",
     "value": ["POI-PlazaCazorla-3123"]
   }
 }
