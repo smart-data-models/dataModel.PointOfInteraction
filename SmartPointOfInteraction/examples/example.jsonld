@@ -1,62 +1,45 @@
 {
     "id": "urn:ngsi-ld:SmartPointOfInteraction:SPOI-ES-4326",
     "type": "SmartPointOfInteraction",
-    "applicationUrl": {
-        "type": "Property",
-        "value": "http://www.example.org"
-    },
+    "applicationUrl": "http://www.example.org",
     "areaCovered": {
-        "type": "Property",
-        "value": {
-            "type": "Polygon",
-            "coordinates": [
+        "coordinates": [
+            [
                 [
-                    [
-                        25.774,
-                        -80.19
-                    ],
-                    [
-                        18.466,
-                        -66.118
-                    ],
-                    [
-                        32.321,
-                        -64.757
-                    ],
-                    [
-                        25.774,
-                        -80.19
-                    ]
+                    25.774,
+                    -80.19
+                ],
+                [
+                    18.466,
+                    -66.118
+                ],
+                [
+                    32.321,
+                    -64.757
+                ],
+                [
+                    25.774,
+                    -80.19
                 ]
             ]
-        }
+        ],
+        "type": "Polygon"
     },
-    "availability": {
-        "type": "Property",
-        "value": "Tu,Th 16:00-20:00"
-    },
-    "category": {
-        "type": "Property",
-        "value": [
-            "co-creation"
-        ]
-    },
-    "refRelatedEntity": {
-        "type": "Relationship",
-        "object": [
-            "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"
-        ]
-    },
-    "refSmartSpot": {
-        "type": "Relationship",
-        "object": [
-            "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",
-            "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",
-            "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"
-        ]
-    },
+    "availability": "Tu,Th 16:00-20:00",
+    "category": [
+        "co-creation"
+    ],
+    "refRelatedEntity": [
+        "urn:ngsi-ld:RelatedEntity:POI-PlazaCazorla-3123"
+    ],
+    "refSmartSpot": [
+        "urn:ngsi-ld:SmartSpot:SSPOT-F94C58E29DD5",
+        "urn:ngsi-ld:SmartSpot:SSPOT-F94C53E21DD2",
+        "urn:ngsi-ld:SmartSpot:SSPOT-F94C51A295D9"
+    ],
     "@context": [
         "https://uri.etsi.org/ngsi-ld/v1/ngsi-ld-core-context.jsonld",
         "https://raw.githubusercontent.com/smart-data-models/dataModel.PointOfInteraction/master/context.jsonld"
     ]
 }
+
