@@ -10,7 +10,7 @@
     "value": "highest"
   },
   "announcedUrl": {
-    "type": "URL",
+    "type": "Text",
     "value": "http://goo.gl/EJ81JP"
   },
   "availability": {
