@@ -24,33 +24,38 @@
 #         curl -X GET http://localhost:1026/ngsi-ld/v1/entities?local=true&limit=1000
 #         
 #         # now the python code you can use to insert some value in the context broker according to the data model
+#         # Version Warning! 
+#         # This code is designed to work with the version 0.8 of pysmartdatamodels or later
+#         # to work with earlier version you need to replace the import instruction for
+#         # from pysmartdatamodels import pysmartdatamodels as sdm
 #         
-from pysmartdatamodels import pysmartdatamodels as sdm
+#         
+import pysmartdatamodels as sdm
 import subprocess
 serverUrl = "http://localhost:1026" # supposed that your broker is installed in localhost. Edit to match your configuration
 dataModel = "SmartSpot"
 subject = "dataModel.PointOfInteraction"
-announcementPeriod = {'type': 'Property', 'value': 500}
-attribute = "announcementPeriod"
-value = announcementPeriod
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-signalStrength = "{'type': 'Property', 'value': 'highest'}"
-attribute = "signalStrength"
-value = signalStrength
-# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
-print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
-
-announcedUrl = "{'type': 'Property', 'value': 'http://goo.gl/EJ81JP'}"
+announcedUrl = "http://goo.gl/EJ81JP"
 attribute = "announcedUrl"
 value = announcedUrl
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
-availability = "{'type': 'Property', 'value': 'Tu,Th 16:00-20:00'}"
+announcementPeriod = 500
+attribute = "announcementPeriod"
+value = announcementPeriod
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+availability = "Tu,Th 16:00-20:00"
 attribute = "availability"
 value = availability
+# The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
+print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
+
+bluetoothChannel = "37,38,39"
+attribute = "bluetoothChannel"
+value = bluetoothChannel
 # The next line creates the query for inserting this attribute in a NGSI-LD context broker if the attribute does not exist it creates it
 print(sdm.update_broker(dataModel, subject, attribute, value, serverUrl=serverUrl, updateThenCreate=True))
 
