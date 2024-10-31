@@ -15,13 +15,13 @@
         "availability": "https://smartdatamodels.org/dataModel.PointOfInteraction/availability",
         "bbox": {
             "@container": "@list",
-            "@id": "geojson:bbox"
+            "@id": "https://purl.org/geojson/vocab#bbox"
         },
         "bluetoothChannel": "https://smartdatamodels.org/dataModel.PointOfInteraction/bluetoothChannel",
         "category": "https://smartdatamodels.org/dataModel.PointOfInteraction/category",
         "coordinates": {
             "@container": "@list",
-            "@id": "geojson:coordinates"
+            "@id": "https://purl.org/geojson/vocab#coordinates"
         },
         "coverageRadius": "https://smartdatamodels.org/dataModel.PointOfInteraction/coverageRadius",
         "dataProvider": "https://smartdatamodels.org/dataProvider",
@@ -30,7 +30,7 @@
         "description": "http://purl.org/dc/terms/description",
         "district": "https://smartdatamodels.org/district",
         "id": "@id",
-        "location": "ngsi-ld:location",
+        "location": "https://uri.etsi.org/ngsi-ld/location",
         "name": "https://smartdatamodels.org/name",
         "ngsi-ld": "https://uri.etsi.org/ngsi-ld/",
         "owner": "https://smartdatamodels.org/owner",
