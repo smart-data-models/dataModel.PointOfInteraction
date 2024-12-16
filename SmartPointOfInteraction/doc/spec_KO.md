@@ -1,35 +1,36 @@
 <!-- 10-Header -->      
 [![Smart Data Models](https://smartdatamodels.org/wp-content/uploads/2022/01/SmartDataModels_logo.png "Logo")](https://smartdatamodels.org)      
-Entität: SmartPointOfInteraction      
-================================<!-- /10-Header -->      
+엔티티: 스마트 상호작용 지점      
+================<!-- /10-Header -->      
 <!-- 15-License -->      
-[Offene Lizenz](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md)      
-[Dokument automatisch generiert](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)      
+[오픈 라이선스](https://github.com/smart-data-models//dataModel.PointOfInteraction/blob/master/SmartPointOfInteraction/LICENSE.md)      
+[문서 자동 생성](https://docs.google.com/presentation/d/e/2PACX-1vTs-Ng5dIAwkg91oTTUdt8ua7woBXhPnwavZ0FxgR8BsAI_Ek3C5q97Nd94HS8KhP-r_quD4H0fgyt3/pub?start=false&loop=false&delayms=3000#slide=id.gb715ace035_0_60)      
 <!-- /15-License -->      
 <!-- 20-Description -->      
-Globale Beschreibung: **Smart Data Models Smart Point of Interaction Entitätsschema für Validierungswerkzeuge**      
-Version: 0.0.2      
+글로벌 설명: **유효성 검사 도구를 위한 스마트 데이터 모델 스마트 상호 작용 지점 엔티티 스키마**.      
+버전: 0.0.2      
 <!-- /20-Description -->      
 <!-- 30-PropertiesList -->      
-## Liste der Eigenschaften      
-<sup><sub>[*] Wenn es für ein Attribut keinen Typ gibt, kann es mehrere Typen oder verschiedene Formate/Muster haben</sub></sup>.      
-- `address[object]`: Die Postanschrift  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: Das Land. Zum Beispiel, Spanien  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)      
-	- `addressLocality[string]`: Die Ortschaft, in der sich die Adresse befindet, und die in der Region liegt  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)      
-	- `addressRegion[string]`: Die Region, in der sich der Ort befindet, und die auf dem Land liegt  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)      
-	- `district[string]`: Ein Bezirk ist eine Art von Verwaltungseinheit, die in einigen Ländern von der lokalen Regierung verwaltet wird.        
-	- `postOfficeBoxNumber[string]`: Die Postfachnummer für Postfachadressen. Zum Beispiel, 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)      
-	- `postalCode[string]`: Die Postleitzahl. Zum Beispiel, 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)      
-	- `streetAddress[string]`: Die Straßenanschrift  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)      
-- `alternateName[string]`: Ein alternativer Name für diesen Artikel  - `applicationUrl[uri]`: Dieses Feld gibt die tatsächliche URL an, die die Lösung oder Anwendung enthält (Informationen, Co-Creation usw.), während das SmartSpot-Feld "announcedUrl" die Broadcast-URL angibt, die dieselbe oder eine verkürzte URL sein kann.  . Model: [https://schema.org/URL](https://schema.org/URL)- `areaCovered[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `areaServed[string]`: Das geografische Gebiet, in dem eine Dienstleistung oder ein angebotener Artikel erbracht wird  . Model: [https://schema.org/Text](https://schema.org/Text)- `availability[string]`: Gibt die Zeitintervalle an, in denen dieser interaktive Dienst generell verfügbar ist. Es ist zu beachten, dass Smart Spots ihre eigene tatsächliche Verfügbarkeit haben, um erweiterte Konfigurationen zu ermöglichen. Die Syntax muss mit schema.org konform sein. So wird beispielsweise ein Dienst, der nur an Wochentagen aktiv ist, als "Verfügbarkeit" kodiert: 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `category[array]`: Definiert die Art der Interaktion. Enum:'Mitgestaltung, Unterhaltung, Information, Infotainment'  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: Eine Folge von Zeichen zur Identifizierung des Anbieters der harmonisierten Dateneinheit  - `dateCreated[date-time]`: Zeitstempel der Entitätserstellung. Dieser wird normalerweise von der Speicherplattform zugewiesen  - `dateModified[date-time]`: Zeitstempel der letzten Änderung der Entität. Dieser wird in der Regel von der Speicherplattform vergeben  - `description[string]`: Eine Beschreibung dieses Artikels  - `id[*]`: Eindeutiger Bezeichner der Entität  - `location[*]`: Geojson-Referenz auf das Element. Es kann Punkt, LineString, Polygon, MultiPoint, MultiLineString oder MultiPolygon sein  - `name[string]`: Der Name dieses Artikels  - `owner[array]`: Eine Liste mit einer JSON-kodierten Zeichenfolge, die auf die eindeutigen Kennungen der Eigentümer verweist  - `refRelatedEntity[array]`: Liste der mit diesem Smart Point of Interaction verbesserten Einrichtungen  . Model: [The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text](The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text)- `refSmartSpot[array]`:  Verweise auf die Smart Spot-Geräte, die Teil des Smart Point of Interaction sind  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: Liste von URLs, die auf zusätzliche Ressourcen zu dem Artikel verweisen  - `source[string]`: Eine Folge von Zeichen, die die ursprüngliche Quelle der Entitätsdaten als URL angibt. Empfohlen wird der voll qualifizierte Domänenname des Quellanbieters oder die URL des Quellobjekts.  - `type[string]`: NGSI-Entitätstyp. Es muss SmartPointOfInteraction sein  <!-- /30-PropertiesList -->      
+## 속성 목록      
+<sup><sub>[*] 속성에 유형이 없는 것은 여러 유형 또는 다른 형식/패턴을 가질 수 있기 때문입니다</sub></sup>.      
+- `address[object]`: 우편 주소  . Model: [https://schema.org/address](https://schema.org/address)	- `addressCountry[string]`: 국가. 예를 들어, 스페인  . Model: [https://schema.org/addressCountry](https://schema.org/addressCountry)      
+	- `addressLocality[string]`: 도로명 주소가 있는 지역 및 해당 지역에 속한 지역  . Model: [https://schema.org/addressLocality](https://schema.org/addressLocality)      
+	- `addressRegion[string]`: 해당 지역이 위치한 지역과 해당 국가의 지역  . Model: [https://schema.org/addressRegion](https://schema.org/addressRegion)      
+	- `district[string]`: 지구는 일부 국가에서는 지방 정부에서 관리하는 행정 구역의 일종입니다.        
+	- `postOfficeBoxNumber[string]`: 사서함 주소의 우체국 사서함 번호입니다. 예: 03578  . Model: [https://schema.org/postOfficeBoxNumber](https://schema.org/postOfficeBoxNumber)      
+	- `postalCode[string]`: 우편 번호입니다. 예: 24004  . Model: [https://schema.org/https://schema.org/postalCode](https://schema.org/https://schema.org/postalCode)      
+	- `streetAddress[string]`: 거리 주소  . Model: [https://schema.org/streetAddress](https://schema.org/streetAddress)      
+	- `streetNr[string]`: 공공 도로의 특정 건물을 식별하는 번호        
+- `alternateName[string]`: 이 항목의 대체 이름  - `applicationUrl[uri]`: 이 필드는 솔루션 또는 애플리케이션(정보, 공동 제작 등)이 포함된 실제 URL을 지정하는 반면, SmartSpot 'announcedUrl' 필드는 동일한 URL 또는 단축 URL일 수 있는 브로드캐스트 URL을 지정합니다.  . Model: [https://schema.org/URL](https://schema.org/URL)- `areaCovered[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `areaServed[string]`: 서비스 또는 제공 품목이 제공되는 지리적 영역  . Model: [https://schema.org/Text](https://schema.org/Text)- `availability[string]`: 이 대화형 서비스를 일반적으로 사용할 수 있는 시간 간격을 지정합니다. 스마트 스폿은 고급 구성을 허용하기 위해 자체적인 실제 가용성을 가지고 있다는 점에 주목할 필요가 있습니다. 구문은 schema.org를 준수해야 합니다. 예를 들어 평일에만 활성화되는 서비스는 '가용성'으로 인코딩됩니다: 'Mo,Tu,We,Th,Fr,Sa 09:00-20:00'  . Model: [https://schema.org/openingHours](https://schema.org/openingHours)- `category[array]`: 상호작용 유형을 정의합니다. Enum: '공동 창작, 엔터테인먼트, 정보, 인포테인먼트'  . Model: [http://schema.org/Text](http://schema.org/Text)- `dataProvider[string]`: 조화된 데이터 엔티티의 공급자를 식별하는 일련의 문자  - `dateCreated[date-time]`: 엔티티 생성 타임스탬프. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `dateModified[date-time]`: 엔티티의 마지막 수정 타임스탬프입니다. 이는 일반적으로 스토리지 플랫폼에서 할당합니다.  - `description[string]`: 이 항목에 대한 설명  - `id[*]`: 엔티티의 고유 식별자  - `location[*]`: 항목에 대한 지오숀 참조입니다. 포인트, 라인 문자열, 다각형, 멀티포인트, 멀티라인 문자열 또는 멀티폴리곤일 수 있습니다.  - `name[string]`: 이 항목의 이름  - `owner[array]`: 소유자의 고유 ID를 참조하는 JSON 인코딩된 문자 시퀀스가 포함된 목록입니다.  - `refRelatedEntity[array]`: 이 스마트 인터랙션 지점으로 개선된 엔티티 목록  . Model: [The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text](The entity type could be any such as a Parking, Point of Interest, etc.http://schema.org/Text)- `refSmartSpot[array]`:  스마트 인터랙션 지점의 일부인 스마트 스팟 장치에 대한 참조  . Model: [https://schema.org/URL](https://schema.org/URL)- `seeAlso[*]`: 항목에 대한 추가 리소스를 가리키는 URL 목록  - `source[string]`: 엔티티 데이터의 원본 소스를 URL로 제공하는 문자 시퀀스입니다. 소스 공급자의 정규화된 도메인 이름 또는 소스 개체에 대한 URL을 사용하는 것이 좋습니다.  - `type[string]`: NGSI 엔티티 유형. SmartPointOfInteraction이어야 합니다.  <!-- /30-PropertiesList -->      
 <!-- 35-RequiredProperties -->      
-Erforderliche Eigenschaften      
+필수 속성      
 - `id`  - `type`  <!-- /35-RequiredProperties -->      
 <!-- 40-RequiredProperties -->      
-Ein Smart Point of Interaction definiert einen Ort mit Technologie zur Interaktion mit Nutzern, z. B. durch Beacon-Technologie von Apple, Eddystone/Physical-Web von Google oder andere auf Nähe basierende Schnittstellen. Da der interaktive Bereich aus mehr als einem Gerät bestehen kann, das die Technologie bereitstellt, umfasst dieses Modell eine Gruppe von SmartSpot-Geräten. Das Datenmodell enthält Informationen über den Bereich/die Fläche, der/die von der Technologie abgedeckt wird (d. h. der Bereich, der von einem Bluetooth Low Energy-basierten Beacon abgedeckt wird), eine Möglichkeit zur Angabe der Funktionsintervalle (d. h. wann interaktive Punkte verfügbar sind) und einen Link zu einer Multimedia-Ressource, die für die Benutzerinteraktion bestimmt ist (d. h. Web Apps usw.). Darüber hinaus kann das Datenmodell auf eine andere NGSI-Entität verweisen, z. B. einen Parkplatz, einen Point of Interest (POI) usw., wobei die Interaktion durch diesen intelligenten Interaktionspunkt angereichert wird.      
+스마트 인터랙션 지점은 Apple의 비콘 기술, Google의 에디스톤/피지컬 웹 또는 기타 근접 기반 인터페이스를 통해 사용자와 상호 작용할 수 있는 기술을 갖춘 장소를 정의합니다. 인터랙티브 영역은 해당 기술을 제공하는 둘 이상의 디바이스로 구성될 수 있으므로 이 모델은 SmartSpot 디바이스 그룹을 포괄합니다. 데이터 모델에는 기술이 적용되는 영역/표면(예: Bluetooth 저에너지 기반 비콘이 적용되는 영역), 기능 간격을 지정하는 방법(예: 인터랙티브 포인트 사용 가능 시기), 사용자 상호 작용을 위한 멀티미디어 리소스 링크(예: 웹 앱 등)에 관한 정보가 포함됩니다. 또한 데이터 모델은 이 스마트 상호 작용 지점에서 제공하는 풍부한 상호 작용을 통해 주차장, 관심 지점(POI) 등과 같은 다른 NGSI 엔티티를 참조할 수 있습니다.      
 <!-- /40-RequiredProperties -->      
 <!-- 50-DataModelHeader -->      
-## Datenmodell Beschreibung der Eigenschaften      
-Alphabetisch sortiert (für Details anklicken)      
+## 속성에 대한 데이터 모델 설명      
+알파벳순으로 정렬(자세한 내용을 보려면 클릭)      
 <!-- /50-DataModelHeader -->      
 <!-- 60-ModelYaml -->      
 <details><summary><strong>full yaml details</strong></summary>        
@@ -615,9 +616,9 @@ SmartPointOfInteraction:
 <!-- 70-MiddleNotes -->      
 <!-- /70-MiddleNotes -->      
 <!-- 80-Examples -->      
-## Beispiel-Nutzlasten      
-#### SmartPointOfInteraction NGSI-v2 key-values Beispiel      
-Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format als Schlüsselwerte. Dies ist kompatibel mit NGSI-v2, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.      
+## 페이로드 예시      
+#### SmartPointOfInteraction NGSI-v2 키-값 예제      
+다음은 JSON-LD 형식의 스마트 포인트 오브 인터랙션의 키-값 예시입니다. 이는 `옵션=키값`을 사용할 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.      
 <details><summary><strong>show/hide example</strong></summary>        
 ```json  
 {  
@@ -662,8 +663,8 @@ SmartPointOfInteraction:
 }  
 ```  
 </details>      
-#### SmartPointOfInteraction NGSI-v2 normalisiert Beispiel      
-Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-v2, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.      
+#### SmartPointOfInteraction NGSI-v2 정규화 예제      
+다음은 정규화된 JSON-LD 형식의 SmartPointOfInteraction의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-v2와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.      
 <details><summary><strong>show/hide example</strong></summary>        
 ```json  
 {  
@@ -726,8 +727,8 @@ SmartPointOfInteraction:
 }  
 ```  
 </details>      
-#### SmartPointOfInteraction NGSI-LD key-values Beispiel      
-Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format als Key-Values. Dies ist mit NGSI-LD kompatibel, wenn `options=keyValues` verwendet wird und liefert die Kontextdaten einer einzelnen Entität.      
+#### SmartPointOfInteraction NGSI-LD 키-값 예제      
+다음은 JSON-LD 형식의 스마트 포인트 오브 인터랙션의 키-값 예시입니다. 이는 `옵션=키값`을 사용할 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.      
 <details><summary><strong>show/hide example</strong></summary>        
 ```json  
 {  
@@ -776,8 +777,8 @@ SmartPointOfInteraction:
 }  
 ```  
 </details>      
-#### SmartPointOfInteraction NGSI-LD normalisiert Beispiel      
-Hier ist ein Beispiel für eine SmartPointOfInteraction im JSON-LD-Format in normalisierter Form. Dies ist kompatibel mit NGSI-LD, wenn keine Optionen verwendet werden, und liefert die Kontextdaten einer einzelnen Entität.      
+#### SmartPointOfInteraction NGSI-LD 정규화 예제      
+다음은 정규화된 JSON-LD 형식의 SmartPointOfInteraction의 예입니다. 이는 옵션을 사용하지 않을 때 NGSI-LD와 호환되며 개별 엔티티의 컨텍스트 데이터를 반환합니다.      
 <details><summary><strong>show/hide example</strong></summary>        
 ```json  
 {  
@@ -847,7 +848,7 @@ SmartPointOfInteraction:
 <!-- 90-FooterNotes -->      
 <!-- /90-FooterNotes -->      
 <!-- 95-Units -->      
-Siehe [FAQ 10] (https://smartdatamodels.org/index.php/faqs/), um eine Antwort auf die Frage zu erhalten, wie man mit Größeneinheiten umgeht      
+[FAQ 10](https://smartdatamodels.org/index.php/faqs/)을 참조하여 규모 단위를 다루는 방법에 대한 답변을 확인하세요.      
 <!-- /95-Units -->      
 <!-- 97-LastFooter -->      
 ---      
