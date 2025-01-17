@@ -32,7 +32,8 @@
               "entertainment",
               "information",
               "infotainment"
-            ]
+            ],
+            "description": "Property. Every element chosen for category"
           },
           "minItems": 1,
           "uniqueItems": true
@@ -53,7 +54,8 @@
           "type": "array",
           "description": "Relationship. List of entities improved with this Smart Point of Interaction. The entity type could be any such as a Parking, Point of Interest, etc.Model:'http://schema.org/Text'",
           "items": {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+            "description": "Property. Every link to the related entities"
           },
           "minItems": 1,
           "uniqueItems": true
@@ -62,7 +64,8 @@
           "type": "array",
           "description": "Property.  References to the Smart Spot devices which are part of the Smart Point of Interaction. Model:'https://schema.org/URL'",
           "items": {
-            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType"
+            "$ref": "https://smart-data-models.github.io/data-models/common-schema.json#/definitions/EntityIdentifierType",
+            "description": "Property. Every link to the related entities"
           },
           "minItems": 1,
           "uniqueItems": true
