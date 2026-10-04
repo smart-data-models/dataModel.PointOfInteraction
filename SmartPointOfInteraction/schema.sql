@@ -1,3 +1,24 @@
 /* (Beta) Export of data model SmartPointOfInteraction of the subject dataModel.PointOfInteraction for a PostgreSQL database. Pending translation of enumerations and multityped attributes */
 CREATE TYPE SmartPointOfInteraction_type AS ENUM ('SmartPointOfInteraction');
-CREATE TABLE SmartPointOfInteraction (address JSON, alternateName TEXT, applicationUrl TEXT, areaCovered JSON, areaServed TEXT, availability TEXT, category JSON, dataProvider TEXT, dateCreated TIMESTAMP, dateModified TIMESTAMP, description TEXT, id TEXT PRIMARY KEY, location JSON, name TEXT, owner JSON, refRelatedEntity JSON, refSmartSpot JSON, seeAlso JSON, source TEXT, type SmartPointOfInteraction_type);
+CREATE TABLE SmartPointOfInteraction (
+  "address" JSON,
+  "alternateName" TEXT,
+  "applicationUrl" TEXT,
+  "areaCovered" JSON,
+  "areaServed" TEXT,
+  "availability" TEXT,
+  "category" JSON,
+  "dataProvider" TEXT,
+  "dateCreated" TIMESTAMP,
+  "dateModified" TIMESTAMP,
+  "description" TEXT,
+  "id" TEXT PRIMARY KEY,
+  "location" JSON,
+  "name" TEXT,
+  "owner" JSON,
+  "refRelatedEntity" JSON,
+  "refSmartSpot" JSON,
+  "seeAlso" JSON,
+  "source" TEXT,
+  "type" SmartPointOfInteraction_type
+);
